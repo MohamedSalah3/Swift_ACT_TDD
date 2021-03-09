@@ -1,0 +1,3 @@
+"+ve" switch state  "-ve" switch state  "p" switch state  "p" switch press time in ms
+pre_pressed           pre_released           pressed           15
+released              released               released          0

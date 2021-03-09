@@ -1,0 +1,20 @@
+/*Motor.c*/
+#include "Motor.h"
+
+static MOTOR_ANGEL_t MOTRO_angel;
+
+void MOTOR_init(void)
+{
+    MOTRO_angel = LED_OFF;
+}
+
+
+MOTOR_ANGEL_t MOTOR_getAngel(void)
+{
+    return MOTRO_angel;
+}
+
+void MOTOR_update(void)
+{
+  /**/
+}
