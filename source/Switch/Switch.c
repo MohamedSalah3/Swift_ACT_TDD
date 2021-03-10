@@ -5,7 +5,7 @@
 /* Globals */
 
 /* Switch State */
-static SWITCH_STATE_t Real_Switch_State;
+static SWITCH_STATE_t Switch_State;
 
 
 
@@ -23,9 +23,13 @@ ERROR_STATUS SWITCH_init(Switch_Cfg_str* Switch_used)
     SWITCH_getSwState = SWITCH_getSwState_real;
   }else if((Switch_used -> Programming_Mode)== TESTING)
   {
+    Switch_State =(Switch_used -> Switch_status);
+    SWITCH_getSwState = SWITCH_getSwState_real;
 
   }else
   {
+    Switch_State =(Switch_used -> Switch_status);
+    SWITCH_getSwState = SWITCH_getSwState_Fake;
 
   }
 return RET;
@@ -34,7 +38,7 @@ return RET;
 /* Switch Real Getter Implementation */
 SWITCH_STATE_t  SWITCH_getSwState_real(void)
 {
-    return Real_Switch_State;
+    return Switch_State;
 }
 
 
