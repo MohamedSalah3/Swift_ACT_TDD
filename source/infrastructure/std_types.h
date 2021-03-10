@@ -8,13 +8,10 @@
 #ifndef STD_TYPES_H_
 #define STD_TYPES_H_
 
-
 /************************************************************************/
 /*                   typedefs for standard types                        */
 /************************************************************************/
-
 #define NULL	((void *)0)
-
 typedef unsigned char uint8_t;
 typedef unsigned int uint16_t;
 typedef unsigned long int uint32_t;
@@ -25,15 +22,11 @@ typedef signed long int sint32_t;
 typedef signed long long sint64_t;
 typedef volatile uint8_t* const reg_type8_t;
 typedef volatile uint16_t* const reg_type16_t;
-
-
 /************************************************************************/
 /*				 		defining boolean values                         */
 /************************************************************************/
 #define FALSE 	0	// defines boolean false
 #define TRUE 	1	// defines boolean true
-
-
 /************************************************************************/
 /*						 LOW/HIGH defines                               */
 /************************************************************************/
@@ -43,6 +36,7 @@ typedef volatile uint16_t* const reg_type16_t;
 /*						 Pointer To Funcrion  definetion                          */
 /************************************************************************/
 typedef void (*ptr_to_Fun)(void);
+typedef uint8_t (*ptr_to_Fun_Ret_uint8t)(void);
 
 /************************************************************************/
 /*						 Macro Functions  definetions                               */

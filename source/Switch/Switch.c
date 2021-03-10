@@ -5,26 +5,27 @@
 /* Globals */
 
 /* Switch State */
-static SWITCH_STATE_t real_switch_state;
+static SWITCH_STATE_t Real_Switch_State;
 
-/* Switch Real Getter Prototype */
-SWITCH_STATE_t  SWITCH_getSwState_real(void);
 
-SWITCH_STATE_t   (*SWITCH_getSwState)(void);
+
+switch_state_Ptr_to_fun SWITCH_getSwState ;
+
 
 
 /* Global Functions Implementation */
-void SWITCH_init(void)
+ERROR_STATUS SWITCH_init(void)
 {
-    real_switch_state = SW_RELEASED;
+    Real_Switch_State = SW_RELEASED;
     SWITCH_getSwState = SWITCH_getSwState_real;
 }
 
 /* Switch Real Getter Implementation */
 SWITCH_STATE_t  SWITCH_getSwState_real(void)
 {
-    return real_switch_state;
+    return Real_Switch_State;
 }
+
 
 void SWITCH_update(void)
 {
