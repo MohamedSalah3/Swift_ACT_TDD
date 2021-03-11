@@ -1,3 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+/* Include tested module header file */
+#define EXPOSE_LED_INTERNALS
+/*#include "../../source/led/led.h"
+*/
+/*Include FakeSwitch */
+#include "../fake_switch/fake_sw.h"
+
+/* Include Unity */
+#include "../unity/unity_fixture.h"
+
+
   /* Helper function to reuse tests */
   static void Motor_TEST_getTestData(SWITCH_STATE_t* initial_switch_state,
   MOTOR_SPEED_t* initial_Motor_Speed,
