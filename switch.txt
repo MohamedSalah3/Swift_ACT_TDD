@@ -1,3 +1,7 @@
-"+ve" switch state  "-ve" switch state  "p" switch state  "p" switch press time in ms
-pre_pressed           pre_released           pressed           15
-released              released               released          0
+"+ve"switchstate  "-ve"switchstate  "p"switchstate  "p"switchpresstimeinms
+SW_PREPRESSED           SW_RELEASED           SW_PREPRESSED          15
+SW_PREPRESSED           SW_PREPRESSED           SW_PREPRESSED          1
+SW_PREPRESSED           SW_PREPRESSED           SW_PREPRESSED          10
+SW_PREPRESSED           SW_PREPRESSED           SW_PREPRESSED          2
+SW_PREPRESSED           SW_PREPRESSED           SW_PREPRESSED          11
+SW_PREPRESSED           SW_PREPRESSED           SW_PREPRESSED          9

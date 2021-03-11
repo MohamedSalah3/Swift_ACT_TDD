@@ -46,6 +46,7 @@ typedef struct Switch_Cfg_str
 	uint8_t pins;
   SWITCH_STATE_t Switch_status;
   uint8_t Programming_Mode;
+	uint8_t Push_Time;
 }Switch_Cfg_str;
 
 /**********************************************************************************/

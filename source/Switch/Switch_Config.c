@@ -13,7 +13,7 @@ Switch_Cfg_str UpSwitch =
 GPIOD ,
 PIN0,
 SW_RELEASED,  /// Intial State
-PRODUCTION
+PRODUCTION,
 };
 /***********************************************************************/
 /*DownSwitch decleration This Switch used To decrease the speed of the motor
@@ -24,7 +24,7 @@ Switch_Cfg_str DownSwitch =
 GPIOD ,
 PIN1,
 SW_RELEASED,
-PRODUCTION
+PRODUCTION,
 };
 /***********************************************************************/
 /*P_Switch decleration This Switch used To decrease the speed of the motor
@@ -35,5 +35,6 @@ Switch_Cfg_str P_Switch =
 GPIOD ,
 PIN2,
 SW_RELEASED,
-PRODUCTION
+PRODUCTION,
+10
 };
