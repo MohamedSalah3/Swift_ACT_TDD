@@ -185,7 +185,7 @@ uint32_t P_SWITCH_push_time=15;
 	/* Arrange */
   SWITCH_init(&P_Switch);
 
-SWITCH_update(&P_Switch,&test_data);
+SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,0)));
   /* Assert */
     LONGS_EQUAL(P_SWITCH_push_time, Switch_get_time(&P_Switch));
 }
@@ -204,9 +204,9 @@ TEST_GROUP_RUNNER(Switch_Status)
 }
 
 
-  test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)
+test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)
  {
-  FILE* Input_File_Ptr2File = fopen("../../switch.txt","r+");
+  FILE* Input_File_Ptr2File = fopen("mm.txt","r+");
   char* Ptr_to_char;
   char STR_UpSwitch[20];
   char STR_DownSwitch[20];
@@ -226,6 +226,10 @@ TEST_GROUP_RUNNER(Switch_Status)
   fscanf(Input_File_Ptr2File,"%s\n",timeSTR_P_Switch);
   }
 
+  printf("%s\n",STR_UpSwitch );
+  printf("%s\n",STR_DownSwitch );
+    printf("%s\n",STR_P_Switch );
+      printf("%s\n",timeSTR_P_Switch );
   /*Make Your Decisions*/
   if(strcmp(STR_UpSwitch,"SW_PREPRESSED") == 0)
   {
