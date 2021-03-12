@@ -18,7 +18,7 @@ this defination will be used with SWITCH_getSwState */
 typedef ptr_to_Fun_Ret_uint8t switch_state_Ptr_to_fun;
 
 extern  switch_state_Ptr_to_fun SWITCH_getSwState ; /* Turned into pointer so we can make it point to another fake function */
-
+extern ptr_to_Fun_Ret_uint32t Switch_get_time;
 
 void switch_st_Testing_Fail(Switch_Cfg_str* Switch_used,uint8_t u8Switch_status,uint8_t u8Timing,uint8_t u8Program_mode );
 
@@ -31,6 +31,10 @@ SWITCH_STATE_t  SWITCH_getSwState_real(Switch_Cfg_str* Switch_used);
 
 SWITCH_STATE_t  SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used);
 
+uint32_t  SWITCH_getP_time_real(Switch_Cfg_str* Switch_used);
 
-ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used);
+uint32_t  SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used);
+
+ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str *Test_data);
+
 #endif

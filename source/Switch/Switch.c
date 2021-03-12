@@ -6,7 +6,7 @@
 
 /* Switch State */
 static SWITCH_STATE_t Switch_State;
-
+ptr_to_Fun_Ret_uint32t Switch_get_time;
 switch_state_Ptr_to_fun SWITCH_getSwState ;
 
 /* Global Functions Implementation */
@@ -28,11 +28,13 @@ else{
   {
     Switch_State =(Switch_used -> Switch_status);
     SWITCH_getSwState = SWITCH_getSwState_real;
+      Switch_get_time=SWITCH_getP_time_real;
   }else if((Switch_used -> Programming_Mode)== TESTING)
   {
 
       Switch_State =(Switch_used -> Switch_status);
       SWITCH_getSwState = SWITCH_getSwState_Fake;
+      Switch_get_time=SWITCH_getP_time_Fake;
 
   }else
   {
@@ -74,10 +76,35 @@ SWITCH_STATE_t  SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used)
     Switch_State = (Switch_used -> Switch_status);
     return Switch_State;
 }
+/* Switch Real Getter Implementation */
+uint32_t  SWITCH_getP_time_real(Switch_Cfg_str* Switch_used)
+{/*Go to */
+  uint32_t time=0;
+    time= (Switch_used -> Push_Time);
+    return time;
+}
+
+uint32_t  SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used)
+{/*Go to */
+  uint32_t time=0;
+    time= (Switch_used -> Push_Time);
+    return time;
+}
 
 
-ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used)
+
+ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str *Test_data)
 {
+  ERROR_STATUS ret=E_OK;
 
+if((Switch_used -> Switch_ID) == P_SWITCH){
+ (Switch_used -> Switch_status)=(Test_data -> Switch_status[P_SWITCH]);
+  (Switch_used -> Push_Time)=(Test_data -> Push_Time);
+}
+ if((Switch_used -> Switch_ID )== DOWNSWITCH)
+  (Switch_used -> Switch_status)=(Test_data -> Switch_status[DOWNSWITCH]);
+  if(Switch_used -> Switch_ID == UPSWITCH)
+   (Switch_used -> Switch_status)=(Test_data -> Switch_status[UPSWITCH]);
 
+  return ret;
 }

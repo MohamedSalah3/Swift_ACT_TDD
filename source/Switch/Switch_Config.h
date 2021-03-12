@@ -36,28 +36,42 @@ typedef uint8_t SWITCH_STATE_t ;
 
 #define PRODUCTION 0
 #define TESTING    1
+#define UPSWITCH   0
+#define DOWNSWITCH 1
+#define P_SWITCH   2
 
 typedef struct Switch_Cfg_str
 {
 	uint8_t GPIO;
 	uint8_t pins;
+	uint8_t Switch_ID;
   SWITCH_STATE_t Switch_status;
   uint8_t Programming_Mode;
-	uint8_t Push_Time;
-	uint8_t u8_Mult_init_detect; 
+	uint32_t Push_Time;
+	uint8_t u8_Mult_init_detect;
 }Switch_Cfg_str;
 
+typedef struct test_Cfg_str
+{
+  SWITCH_STATE_t Switch_status[3];
+	uint32_t Push_Time;
+}test_Cfg_str;
+
+
+extern test_Cfg_str test_data;
 /**********************************************************************************/
 /*        extern Switches                                                       */
 /**********************************************************************************/
 extern Switch_Cfg_str UpSwitch;
 extern Switch_Cfg_str DownSwitch;
 extern Switch_Cfg_str P_Switch;
+
 /************************************************************************/
 /*						 Pointer To Funcrion  definetion                          */
 /************************************************************************/
 typedef void (*ptr_to_Fun)(void);
 typedef SWITCH_STATE_t (*ptr_to_Fun_Ret_uint8t)(Switch_Cfg_str *);
+typedef uint32_t (*ptr_to_Fun_Ret_uint32t)(Switch_Cfg_str *);
 
 
 #endif

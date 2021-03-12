@@ -9,6 +9,6 @@
 */
 #include "../../source/Motor/Motor.h"
 
-static void Switch_getTestData(Switch_Cfg_str* Switch_used,uint8_t test_num);
+test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num);
 
 #endif

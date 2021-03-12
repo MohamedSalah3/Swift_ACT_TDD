@@ -13,6 +13,7 @@ Switch_Cfg_str UpSwitch =
 {
 GPIOD ,
 PIN0,
+UPSWITCH,
 SW_PREPRESSED,  /// Intial State
 PRODUCTION,
 0,
@@ -26,6 +27,7 @@ Switch_Cfg_str DownSwitch =
 {
 GPIOD ,
 PIN1,
+DOWNSWITCH,
 SW_RELEASED,
 PRODUCTION,
 0,
@@ -39,8 +41,18 @@ Switch_Cfg_str P_Switch =
 {
 GPIOD ,
 PIN2,
+P_SWITCH,
 SW_RELEASED,
 PRODUCTION,
 10,
 0
+};
+
+
+test_Cfg_str test_data =
+{
+
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+
 };

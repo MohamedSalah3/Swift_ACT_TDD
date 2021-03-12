@@ -1,9 +1,9 @@
 #include "Switch_Fake.h"
-
+#include <math.h>
+#include <stdlib.h>
 TEST_GROUP(Switch_Status);
 
 
-  static void Switch_getTestData(SWITCH_STATE_t* initial_switch_state,uint8_t test_num);
 
 TEST_SETUP(Switch_Status)
 {
@@ -166,6 +166,30 @@ DownSwitch.Switch_status = 30;
 SWITCH_init(&DownSwitch);
 }
 
+TEST(Switch_Status,Update_fun_is_updating)
+{
+
+    /*!
+		  * @par Given : switch update is used to update objects
+		  * @par When  : SWITCH_update() is called
+		  * @par Then  : Switch objects should change
+	*/
+
+
+    /* Expected  state */
+uint8_t UpSwitch_Switch_status = SW_PREPRESSED           ;
+uint8_t Down_Switch_Switch_status =SW_RELEASED             ;
+uint8_t P_SWITCH_Switch_status=SW_PRESSED       ;
+uint32_t P_SWITCH_push_time=15;
+
+	/* Arrange */
+  SWITCH_init(&P_Switch);
+
+SWITCH_update(&P_Switch,&test_data);
+  /* Assert */
+    LONGS_EQUAL(P_SWITCH_push_time, Switch_get_time(&P_Switch));
+}
+
 TEST_GROUP_RUNNER(Switch_Status)
 {/*Init Func Testing */
     RUN_TEST_CASE(Switch_Status, Switchup_Realeased_After_Init);
@@ -176,11 +200,12 @@ TEST_GROUP_RUNNER(Switch_Status)
     RUN_TEST_CASE(Switch_Status, INVALID_PARM_init_detection);
     /* And so on..*/
     /* False transitions & 1-Switch coverage tests should be added */
+    RUN_TEST_CASE(Switch_Status, Update_fun_is_updating);
 }
 
 
-  static void Switch_getTestData(Switch_Cfg_str* Switch_used,uint8_t test_num)
-  {
+  test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)
+ {
   FILE* Input_File_Ptr2File = fopen("../../switch.txt","r+");
   char* Ptr_to_char;
   char STR_UpSwitch[20];
@@ -194,45 +219,81 @@ TEST_GROUP_RUNNER(Switch_Status)
   memset(STR_DownSwitch,0,20);
   memset(STR_P_Switch,0,20);
   /*'-' used To diffentiate between numbers*/
-  memset(timeSTR_P_Switch,'-',5);
+  memset(timeSTR_P_Switch,'M',5);
   fscanf(Input_File_Ptr2File,"%s\n",STR_UpSwitch);
   fscanf(Input_File_Ptr2File,"%s\n",STR_DownSwitch);
   fscanf(Input_File_Ptr2File,"%s\n",STR_P_Switch);
   fscanf(Input_File_Ptr2File,"%s\n",timeSTR_P_Switch);
   }
 
-if(Switch_used == (&UpSwitch)){Ptr_to_char = STR_UpSwitch;}
-else if(Switch_used == (&DownSwitch)){Ptr_to_char = STR_DownSwitch;}
-else if(Switch_used ==(&P_Switch)){Ptr_to_char = STR_P_Switch;}
-else
-{
-
-}
-
   /*Make Your Decisions*/
-  if(strcmp(Ptr_to_char,"SW_PREPRESSED") == 0)
+  if(strcmp(STR_UpSwitch,"SW_PREPRESSED") == 0)
   {
-      (Switch_used -> Switch_status) = SW_PREPRESSED;
+      (Data_Return -> Switch_status[UPSWITCH]) = SW_PREPRESSED;
   }
-  else if (strcmp(Ptr_to_char,"SW_PRESSED") == 0)
+  else if (strcmp(STR_UpSwitch,"SW_PRESSED") == 0)
   {
-      (Switch_used -> Switch_status) = SW_PRESSED;
+      (Data_Return -> Switch_status[UPSWITCH]) = SW_PRESSED;
   }
-  else if(strcmp(Ptr_to_char,"SW_PRERELEASED") == 0)
+  else if(strcmp(STR_UpSwitch,"SW_PRERELEASED") == 0)
   {
-      (Switch_used -> Switch_status) = SW_PRERELEASED;
+      (Data_Return -> Switch_status[UPSWITCH]) = SW_PRERELEASED;
   }
-  else if(strcmp(Ptr_to_char,"SW_RELEASED") == 0)
+  else if(strcmp(STR_UpSwitch,"SW_RELEASED") == 0)
   {
-      (Switch_used -> Switch_status) = SW_RELEASED;
+      (Data_Return -> Switch_status[UPSWITCH]) =SW_RELEASED;
   }
   else
   {
-      printf("Incorrect test data\n");
+      printf("Incorrect test data STR_UpSwitch\n");
   }
 
+  if(strcmp(STR_DownSwitch,"SW_PREPRESSED") == 0)
+  {
+      (Data_Return -> Switch_status[DOWNSWITCH]) = SW_PREPRESSED;
+  }
+  else if (strcmp(STR_DownSwitch,"SW_PRESSED") == 0)
+  {
+      (Data_Return -> Switch_status[DOWNSWITCH]) = SW_PRESSED;
+  }
+  else if(strcmp(STR_DownSwitch,"SW_PRERELEASED") == 0)
+  {
+      (Data_Return -> Switch_status[DOWNSWITCH]) = SW_PRERELEASED;
+  }
+  else if(strcmp(STR_DownSwitch,"SW_RELEASED") == 0)
+  {
+      (Data_Return -> Switch_status[DOWNSWITCH]) =SW_RELEASED;
+  }
+  else
+  {
+      printf("Incorrect test data  STR_DownSwitch\n");
+  }
+
+  if(strcmp(STR_P_Switch,"SW_PREPRESSED") == 0)
+  {
+      (Data_Return -> Switch_status[P_SWITCH]) = SW_PREPRESSED;
+  }
+  else if (strcmp(STR_P_Switch,"SW_PRESSED") == 0)
+  {
+      (Data_Return -> Switch_status[P_SWITCH]) = SW_PRESSED;
+  }
+  else if(strcmp(STR_P_Switch,"SW_PRERELEASED") == 0)
+  {
+      (Data_Return -> Switch_status[P_SWITCH]) = SW_PRERELEASED;
+  }
+  else if(strcmp(STR_P_Switch,"SW_RELEASED") == 0)
+  {
+      (Data_Return -> Switch_status[P_SWITCH]) =SW_RELEASED;
+  }
+  else
+  {
+      printf("Incorrect test data STR_P_Switch\n");
+  }
+  (Data_Return -> Push_Time)=atoi(timeSTR_P_Switch);
   fclose(Input_File_Ptr2File);
 
 
 }else{  printf("Failed To open the file");}
+
+return Data_Return;
   }
