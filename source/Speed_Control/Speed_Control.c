@@ -10,7 +10,7 @@
 			SWITCH_init(&P_Switch);
 			SWITCH_init(&UpSwitch);
 			SWITCH_init(&DownSwitch);
-	
+
 
 		return ret;
 	}
@@ -52,8 +52,7 @@ if(SpeedSTR_used -> Switch_status[P_SWITCH] == SW_PRESSED)
 	if(time>30){
 	while(time -= 30)
 	{	if(SpeedSTR_used-> MOTOR_angel != MINMUM)
-		{printf("%d%t%d\n",SpeedSTR_used-> MOTOR_angel ,time);
-			SpeedSTR_used-> MOTOR_angel++;}
+		{	SpeedSTR_used-> MOTOR_angel++;}
 
 	}
 }

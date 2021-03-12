@@ -22,7 +22,7 @@ return Angle;
 void MOTOR_update(void)
 {
 	FILE* OUTPUT_File_Ptr2File = fopen("MOTOR.txt","a");
-	fprintf(OUTPUT_File_Ptr2File, "%i\n", MOTOR_getAngel());
+	fprintf(OUTPUT_File_Ptr2File, "%u\n",MOTOR_getAngel(&SpeedSTR_update));
 	fclose(OUTPUT_File_Ptr2File);
  /*Write on output text*/
 }

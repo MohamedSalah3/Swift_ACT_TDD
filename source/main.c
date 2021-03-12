@@ -14,7 +14,7 @@
 {
   RUN_TEST_GROUP(Switch_Status);
    RUN_TEST_GROUP(Speed_Control);
-
+RUN_TEST_GROUP(Motor_Angle);
 }
 
 

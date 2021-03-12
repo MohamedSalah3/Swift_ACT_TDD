@@ -1,4 +1,4 @@
-
+#include "Motor_test.h"
 TEST_GROUP(Motor_Angle);
 
 
@@ -25,13 +25,13 @@ fclose(OUTPUT_File_Ptr2File);
 
 TEST(Motor_Angle,output)
 {
-
-
+MOTOR_init();
+MOTOR_update();
 
 }
 
 
-TEST_GROUP_RUNNER(Speed_Control)
+TEST_GROUP_RUNNER(Motor_Angle)
 {
 RUN_TEST_CASE(Motor_Angle,output);
 }

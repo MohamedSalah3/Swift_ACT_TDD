@@ -8,7 +8,6 @@
 /*#include "../../source/led/led.h"
 */
 #include "../../source/Motor/Motor.h"
-#include "../Fake_Switch/Switch_Fake.h"
 #include <stdlib.h>
 
 static void Motor_TEST_SET_Result_Data(MOTOR_ANGEL_t* expected_Motor_Speed);
