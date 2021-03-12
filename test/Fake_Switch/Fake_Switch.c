@@ -3,6 +3,8 @@
 #include <stdlib.h>
 TEST_GROUP(Switch_Status);
 
+TEST_GROUP(Speed_Control);
+
 
 
 TEST_SETUP(Switch_Status)
@@ -190,6 +192,7 @@ SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,0)));
     LONGS_EQUAL(P_SWITCH_push_time, Switch_get_time(&P_Switch));
 }
 
+
 TEST_GROUP_RUNNER(Switch_Status)
 {/*Init Func Testing */
     RUN_TEST_CASE(Switch_Status, Switchup_Realeased_After_Init);
@@ -201,8 +204,8 @@ TEST_GROUP_RUNNER(Switch_Status)
     /* And so on..*/
     /* False transitions & 1-Switch coverage tests should be added */
     RUN_TEST_CASE(Switch_Status, Update_fun_is_updating);
-}
 
+}
 
 
 test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)

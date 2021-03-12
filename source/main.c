@@ -13,7 +13,7 @@
  void RunAllTests(void)
 {
   RUN_TEST_GROUP(Switch_Status);
-  //  RUN_TEST_GROUP(LedState);
+   RUN_TEST_GROUP(Speed_Control);
 
 }
 

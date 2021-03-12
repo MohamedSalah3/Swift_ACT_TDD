@@ -42,9 +42,9 @@ Switch_Cfg_str P_Switch =
 GPIOD ,
 PIN2,
 P_SWITCH,
-SW_RELEASED,
+SW_PRESSED,
 TESTING,
-10,
+60,
 0
 };
 

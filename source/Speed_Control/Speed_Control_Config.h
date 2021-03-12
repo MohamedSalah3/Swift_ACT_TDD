@@ -2,6 +2,9 @@
 #ifndef SPEED_CONTROL_CONFIG_H_
 #define SPEED_CONTROL_CONFIG_H_
 
+#include "../../test/unity/unity_fixture.h"
+#include "../infrastructure/Error.h"
+#include "../infrastructure/std_types.h"
 
 #include "../Switch/Switch.h"
 

@@ -3,7 +3,7 @@
 speed_Cfg_str SpeedSTR_update = {
 {UPSWITCH,DOWNSWITCH,P_SWITCH}
   ,
-  {SW_PREPRESSED    ,       SW_RELEASED ,            SW_PRESSED },
+  {SW_PREPRESSED    ,       SW_PREPRESSED ,            SW_PRESSED },
   15,
   MEDIUM,
   TESTING

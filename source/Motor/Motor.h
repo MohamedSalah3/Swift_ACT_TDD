@@ -9,9 +9,10 @@
 
 typedef uint8_t MOTOR_ANGEL_t ;
 
-ERROR_STATUS  MOTOR_init(void);
-ERROR_STATUS  MOTOR_getAngel(MOTOR_ANGEL_t *);
-ERROR_STATUS  MOTOR_update(void);
+ERROR_STATUS MOTOR_init(void);
+MOTOR_ANGEL_t MOTOR_getAngel(speed_Cfg_str* SpeedSTR_used);
+
+void MOTOR_update(void);
 
 
 
