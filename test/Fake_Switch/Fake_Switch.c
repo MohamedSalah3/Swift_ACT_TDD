@@ -185,7 +185,7 @@ uint32_t P_SWITCH_push_time=15;
 	/* Arrange */
   SWITCH_init(&P_Switch);
 
-SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,3)));
+SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,0)));
   /* Assert */
     LONGS_EQUAL(P_SWITCH_push_time, Switch_get_time(&P_Switch));
 }
@@ -228,12 +228,7 @@ test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)
   fscanf(Input_File_Ptr2File,"%s\n",STR_P_Switch);
   fscanf(Input_File_Ptr2File,"%s\n",timeSTR_P_Switch);
   }
- printf("%d",Input_File_Ptr2File);
 if(Input_File_Ptr2File){
-  printf("%s\n",STR_UpSwitch );
-  printf("%s\n",STR_DownSwitch );
-    printf("%s\n",STR_P_Switch );
-      printf("%s\n",timeSTR_P_Switch );
   /*Make Your Decisions*/
   if(strcmp(STR_UpSwitch,"SW_PREPRESSED") == 0)
   {
