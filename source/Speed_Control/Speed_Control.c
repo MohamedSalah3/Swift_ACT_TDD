@@ -1,13 +1,19 @@
 /*Speed_Control.c*/
 #include "Speed_Control.h"
+
+switch_state_Ptr_to_fun  Speed_Control_get ;
+
 ERROR_STATUS Speed_Control_init(void)
 {
 	ERROR_STATUS ret=E_OK;
-    MOTOR_angel = MEDIUM;
+    SpeedSTR_update.MOTOR_angel = MEDIUM;
 	return ret;
 }
 
-
+void speed_Con_Testing_setter(speed_Cfg_str* SpeedSTR_used,uint8_t Program_Mode)
+{
+SpeedSTR_used -> Programming_Mode = Program_Mode;
+}
 ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used)
 {
 	ERROR_STATUS ret=E_OK;
@@ -21,17 +27,15 @@ SpeedSTR_used->Switch_status[DOWNSWITCH] = DownSwitch.Switch_status;
 ret+=SWITCH_update(&P_Switch,&test_data);
 SpeedSTR_used->Switch_ID[P_SWITCH]=	P_Switch.Switch_ID;
 SpeedSTR_used->Switch_status[P_SWITCH] = P_Switch.Switch_status;
-SpeedSTR_used->Push_Time[P_SWITCH] =P_Switch.Push_Time;
+SpeedSTR_used->Push_Time =P_Switch.Push_Time;
 
 return ret;
 }
 
-ERROR_STATUS Angel_update(speed_Cfg_str* SpeedSTR_used)
+MOTOR_ANGEL_t Angel_update(speed_Cfg_str* SpeedSTR_used)
 {
 
-  ERROR_STATUS ret=E_OK;
 
-ret= Speed_Control_get_Switch_state(&SpeedSTR_get);
 
-    return ret;
+return (SpeedSTR_used -> MOTOR_angel) ;
 }

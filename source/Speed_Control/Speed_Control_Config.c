@@ -5,5 +5,6 @@ speed_Cfg_str SpeedSTR_update = {
   ,
   {SW_PREPRESSED    ,       SW_RELEASED ,            SW_PRESSED },
   15,
-  MEDIUM
-}
+  MEDIUM,
+  TESTING
+};
