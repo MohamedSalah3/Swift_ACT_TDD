@@ -12,9 +12,9 @@
 /* Test Groups Runner */
  void RunAllTests(void)
 {
-  //  RUN_TEST_GROUP(FakeSwitch);
+  RUN_TEST_GROUP(Switch_Status);
   //  RUN_TEST_GROUP(LedState);
-  
+
 }
 
 
@@ -35,16 +35,17 @@ int main(int argc, char const *argv[])
 	ret=SWITCH_init(&P_Switch);
 	ret=Speed_Control_init();
 	ret=MOTOR_init();
-	
+/*
 	while(1)
 	{
 		ret=SWITCH_update(&UpSwitch);
 		ret=SWITCH_update(&DownSwitch);
 		ret=SWITCH_update(&P_Switch);
-		
-		
-		
+
+
+
 	}
+  */
     return 0;
 
 }

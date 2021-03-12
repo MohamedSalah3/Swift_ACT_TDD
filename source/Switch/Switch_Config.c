@@ -8,12 +8,15 @@
 /*UPSwitch decleration This Switch used To increase the speed of the motor
 unless the speed is maximum                                             */
 /***********************************************************************/
+
 Switch_Cfg_str UpSwitch =
 {
 GPIOD ,
 PIN0,
-SW_RELEASED,  /// Intial State
+SW_PREPRESSED,  /// Intial State
 PRODUCTION,
+0,
+0
 };
 /***********************************************************************/
 /*DownSwitch decleration This Switch used To decrease the speed of the motor
@@ -25,6 +28,8 @@ GPIOD ,
 PIN1,
 SW_RELEASED,
 PRODUCTION,
+0,
+0
 };
 /***********************************************************************/
 /*P_Switch decleration This Switch used To decrease the speed of the motor
@@ -36,5 +41,6 @@ GPIOD ,
 PIN2,
 SW_RELEASED,
 PRODUCTION,
-10
+10,
+0
 };
