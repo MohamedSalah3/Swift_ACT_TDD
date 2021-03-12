@@ -6,21 +6,29 @@
 static MOTOR_ANGEL_t MOTRO_angel;
 static SWITCH_STATE_t Switch_state;
 
-void Speed_Control_init(void)
+ERROR_STATUS Speed_Control_init(void)
 {
+	ERROR_STATUS ret=E_OK;
     MOTRO_angel = MINMUM;
+	return ret;
 }
 
 
-SWITCH_STATE_t Speed_Control_get_Switch_state(void)
+ERROR_STATUS Speed_Control_get_Switch_state(uint8_t member,SWITCH_STATE_t *Status,uint8_t *time)
 {
+ERROR_STATUS ret=E_OK;
+//ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used)
 
 
-
-    return Switch_state;
+    return ret;
 }
 
-void Angel_update(void)
+ERROR_STATUS Angel_update(MOTOR_ANGEL_t *Angle)
 {
-  /**/
+  
+  ERROR_STATUS ret=E_OK;
+//ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used)
+
+
+    return ret;
 }
