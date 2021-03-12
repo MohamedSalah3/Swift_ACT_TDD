@@ -1,14 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "acdfgilmnoprstuv",
-  1: "gpu",
-  2: "msu",
-  3: "mrstuv",
-  4: "acfginoprstuv",
-  5: "gu",
-  6: "msu",
-  7: "lsu",
-  8: "cdfilmprstu"
+  0: "acdefghilmnoprstuv",
+  1: "gpstu",
+  2: "efmsu",
+  3: "amrstuv",
+  4: "acdfgimnoprstuv",
+  5: "egmpstu",
+  6: "u",
+  7: "u",
+  8: "cdefghilmnprstu"
 };
 
 var indexSectionNames =

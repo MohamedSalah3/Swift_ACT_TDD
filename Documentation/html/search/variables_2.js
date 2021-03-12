@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['f_932',['f',['../unity_8c.html#af900396d7b72ff2a7002e8befe8cf8f1',1,'unity.c']]]
+  ['downswitch_1033',['DownSwitch',['../_switch___config_8c.html#a90c70482c27a1825df92bbf520155161',1,'DownSwitch():&#160;Switch_Config.c'],['../_switch___config_8h.html#a90c70482c27a1825df92bbf520155161',1,'DownSwitch():&#160;Switch_Config.c']]]
 ];

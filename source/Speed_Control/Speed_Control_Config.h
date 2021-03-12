@@ -13,7 +13,11 @@ typedef uint8_t MOTOR_ANGEL_t;
 #define MEDIUM 90
 #define MAXIMUM 10
 
-
+/****************************************************************
+* Defining a structure makes the code More Object orieted
+*So This Structure speed_Cfg_str is used to carry all information
+needed to the motor Module which makes Life easier :)
+/****************************************************************/
 
 typedef struct speed_Cfg_str
 {

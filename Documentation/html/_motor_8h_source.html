@@ -100,27 +100,46 @@ $(document).ready(function(){initNavTree('_motor_8h_source.html',''); initResiza
 <a href="_motor_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*Motor.h*/</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MOTOR_H_</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define MOTOR_H_</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_motor___config_8h.html">Motor_Config.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2aa9226765af003137d277bb0b39d5744f">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {<a class="code" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>, <a class="code" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>, <a class="code" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2aa9226765af003137d277bb0b39d5744f">LED_FLASH</a>} <a class="code" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="_motor_8h.html#a9257c7bb10f18e855bdce6a8087755e2">MOTOR_init</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<a class="code" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a>     <a class="code" href="_motor_8h.html#ab7a32f36a948c894c122d7f56f75fdcc">MOTOR_getAngel</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span>            <a class="code" href="_motor_8h.html#a38e9c5fb5becd4185b37ad0d5ae6d556">MOTOR_update</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*********************************************************************/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*                  _Includes                                       */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*******************************************************************/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;../Speed_Control/Speed_Control.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/*******************************************************************/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/*                Definitions                                        */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">/*******************************************************************/</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="_motor_8h.html#a2ff9d7aab10b044ab3776d5b6b436692">   11</a></span>&#160;<span class="preprocessor">#define MINMUM 140</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="_motor_8h.html#a455b219d48b21108576f53129be38c32">   12</a></span>&#160;<span class="preprocessor">#define MEDIUM 90</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="_motor_8h.html#a7144aa2210e7cd9f35160cdcdaa5a648">   13</a></span>&#160;<span class="preprocessor">#define MAXIMUM 10</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_motor_8h_html_a07a6e3ae5c6763d5016cf79c0cb44af2"><div class="ttname"><a href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a></div><div class="ttdeci">MOTOR_ANGEL_t</div><div class="ttdef"><b>Definition:</b> Motor.h:8</div></div>
-<div class="ttc" id="a_motor_8h_html_a07a6e3ae5c6763d5016cf79c0cb44af2aa9226765af003137d277bb0b39d5744f"><div class="ttname"><a href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2aa9226765af003137d277bb0b39d5744f">LED_FLASH</a></div><div class="ttdeci">@ LED_FLASH</div><div class="ttdef"><b>Definition:</b> Motor.h:8</div></div>
-<div class="ttc" id="a_motor_8h_html_a07a6e3ae5c6763d5016cf79c0cb44af2add01b80eb93658fb4cf7eb9aceb89a1d"><div class="ttname"><a href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a></div><div class="ttdeci">@ LED_ON</div><div class="ttdef"><b>Definition:</b> Motor.h:8</div></div>
-<div class="ttc" id="a_motor_8h_html_a07a6e3ae5c6763d5016cf79c0cb44af2afc0ca8cc6cbe215fd3f1ae6d40255b40"><div class="ttname"><a href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a></div><div class="ttdeci">@ LED_OFF</div><div class="ttdef"><b>Definition:</b> Motor.h:8</div></div>
-<div class="ttc" id="a_motor_8h_html_a38e9c5fb5becd4185b37ad0d5ae6d556"><div class="ttname"><a href="_motor_8h.html#a38e9c5fb5becd4185b37ad0d5ae6d556">MOTOR_update</a></div><div class="ttdeci">void MOTOR_update(void)</div><div class="ttdef"><b>Definition:</b> Motor.c:17</div></div>
-<div class="ttc" id="a_motor_8h_html_a9257c7bb10f18e855bdce6a8087755e2"><div class="ttname"><a href="_motor_8h.html#a9257c7bb10f18e855bdce6a8087755e2">MOTOR_init</a></div><div class="ttdeci">void MOTOR_init(void)</div><div class="ttdef"><b>Definition:</b> Motor.c:6</div></div>
-<div class="ttc" id="a_motor_8h_html_ab7a32f36a948c894c122d7f56f75fdcc"><div class="ttname"><a href="_motor_8h.html#ab7a32f36a948c894c122d7f56f75fdcc">MOTOR_getAngel</a></div><div class="ttdeci">MOTOR_ANGEL_t MOTOR_getAngel(void)</div><div class="ttdef"><b>Definition:</b> Motor.c:12</div></div>
-<div class="ttc" id="a_motor___config_8h_html"><div class="ttname"><a href="_motor___config_8h.html">Motor_Config.h</a></div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/****************************************************************/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*typedef used here to make the code readable*/</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/****************************************************************/</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">   18</a></span>&#160;<span class="keyword">typedef</span> uint8_t <a class="code" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a> ;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/*@parm ERROR_STATUS</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">This param is used to make sure that the structure of the function is</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">working fine by building whitebox tests */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<a class="code" href="_error_8h.html#aee03127e28c2fce8a862b1154bc09028">ERROR_STATUS</a> <a class="code" href="_motor_8h.html#ad5c7e9daebc3bc14df1dc485b2d58623">MOTOR_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/*@Parm [in] This function gets the angle of the motor */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a> <a class="code" href="_motor_8h.html#a3179badcad684e7dd8f77157e6cadc13">MOTOR_getAngel</a>(<a class="code" href="structspeed___cfg__str.html">speed_Cfg_str</a>* SpeedSTR_used);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">/*This Functions Takes the angle form MOTOR_get_Angel and</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">Update it to the Motor text file*/</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_motor_8h.html#a38e9c5fb5becd4185b37ad0d5ae6d556">MOTOR_update</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_error_8h_html_aee03127e28c2fce8a862b1154bc09028"><div class="ttname"><a href="_error_8h.html#aee03127e28c2fce8a862b1154bc09028">ERROR_STATUS</a></div><div class="ttdeci">uint8_t ERROR_STATUS</div><div class="ttdef"><b>Definition:</b> Error.h:19</div></div>
+<div class="ttc" id="a_motor_8h_html_a3179badcad684e7dd8f77157e6cadc13"><div class="ttname"><a href="_motor_8h.html#a3179badcad684e7dd8f77157e6cadc13">MOTOR_getAngel</a></div><div class="ttdeci">MOTOR_ANGEL_t MOTOR_getAngel(speed_Cfg_str *SpeedSTR_used)</div><div class="ttdef"><b>Definition:</b> Motor.c:15</div></div>
+<div class="ttc" id="a_motor_8h_html_a38e9c5fb5becd4185b37ad0d5ae6d556"><div class="ttname"><a href="_motor_8h.html#a38e9c5fb5becd4185b37ad0d5ae6d556">MOTOR_update</a></div><div class="ttdeci">void MOTOR_update(void)</div><div class="ttdef"><b>Definition:</b> Motor.c:22</div></div>
+<div class="ttc" id="a_motor_8h_html_a5b35294337f49da506342b7a70031815"><div class="ttname"><a href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a></div><div class="ttdeci">uint8_t MOTOR_ANGEL_t</div><div class="ttdef"><b>Definition:</b> Motor.h:18</div></div>
+<div class="ttc" id="a_motor_8h_html_ad5c7e9daebc3bc14df1dc485b2d58623"><div class="ttname"><a href="_motor_8h.html#ad5c7e9daebc3bc14df1dc485b2d58623">MOTOR_init</a></div><div class="ttdeci">ERROR_STATUS MOTOR_init(void)</div><div class="ttdef"><b>Definition:</b> Motor.c:6</div></div>
+<div class="ttc" id="astructspeed___cfg__str_html"><div class="ttname"><a href="structspeed___cfg__str.html">speed_Cfg_str</a></div><div class="ttdef"><b>Definition:</b> Speed_Control_Config.h:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

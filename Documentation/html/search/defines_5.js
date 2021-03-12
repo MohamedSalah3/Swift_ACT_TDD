@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['malloc_1028',['malloc',['../unity__memory_8h.html#acf143577800376dd931c059ecc61ba06',1,'unity_memory.h']]],
-  ['malloc_5fdont_5ffail_1029',['MALLOC_DONT_FAIL',['../unity__memory_8c.html#a3f1b1eff9064dbe426821f93e435fee5',1,'unity_memory.c']]]
+  ['high_1151',['HIGH',['../std__types_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2',1,'std_types.h']]]
 ];

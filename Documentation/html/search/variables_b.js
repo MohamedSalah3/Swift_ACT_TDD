@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['unity_949',['Unity',['../unity_8c.html#aad738f665f16eb2336b8bc33f432d0da',1,'Unity():&#160;unity.c'],['../unity__internals_8h.html#aad738f665f16eb2336b8bc33f432d0da',1,'Unity():&#160;unity.c']]],
-  ['unityfixture_950',['UnityFixture',['../unity__fixture_8c.html#a7bb0ff1b1e2f4e56979878609016c11e',1,'UnityFixture():&#160;unity_fixture.c'],['../unity__fixture__internals_8h.html#a7bb0ff1b1e2f4e56979878609016c11e',1,'UnityFixture():&#160;unity_fixture.c']]],
-  ['unitystrerr64_951',['UnityStrErr64',['../unity_8c.html#ad256fb09941c7d6fef35a9b029b85a63',1,'UnityStrErr64():&#160;unity.c'],['../unity__internals_8h.html#af5c213ecde93420aed908a92a5b32c66',1,'UnityStrErr64():&#160;unity.c']]],
-  ['unitystrerrdouble_952',['UnityStrErrDouble',['../unity_8c.html#a9cd168e94b9b20678e05a2f5ec3d377b',1,'UnityStrErrDouble():&#160;unity.c'],['../unity__internals_8h.html#ac8d03220554dfa13081f6a057ced349e',1,'UnityStrErrDouble():&#160;unity.c']]],
-  ['unitystrerrfloat_953',['UnityStrErrFloat',['../unity_8c.html#a900f212fc652672c6ef325f3099b069f',1,'UnityStrErrFloat():&#160;unity.c'],['../unity__internals_8h.html#ab644636442c612d56dfadc6970d2af67',1,'UnityStrErrFloat():&#160;unity.c']]],
-  ['unitystrerrshorthand_954',['UnityStrErrShorthand',['../unity_8c.html#ae5ca7d764811d61cac3dc0add7e68697',1,'UnityStrErrShorthand():&#160;unity.c'],['../unity__internals_8h.html#a1e2d7034b98b9532ec094f55b909e99b',1,'UnityStrErrShorthand():&#160;unity.c']]],
-  ['unitystrfail_955',['UnityStrFail',['../unity_8c.html#a578ecde02754a8a68885e0ace8c2d92a',1,'UnityStrFail():&#160;unity.c'],['../unity__internals_8h.html#ad8448fdd418724662e7d4ccf03d96b08',1,'UnityStrFail():&#160;unity.c']]],
-  ['unitystrignore_956',['UnityStrIgnore',['../unity_8c.html#a74acf82e2c717785a1b72242164b4d76',1,'UnityStrIgnore():&#160;unity.c'],['../unity__internals_8h.html#afee1e18090d3dba33ca2573759911a03',1,'UnityStrIgnore():&#160;unity.c']]],
-  ['unitystrok_957',['UnityStrOk',['../unity_8c.html#abcaeb4ad2faa7511a84c46e9fc8c85cc',1,'UnityStrOk():&#160;unity.c'],['../unity__internals_8h.html#aa0d91c84fde1e6562ec77dd393b5c07c',1,'UnityStrOk():&#160;unity.c']]],
-  ['unitystrpass_958',['UnityStrPass',['../unity_8c.html#ac85b07366619d47deb012c396bcad684',1,'UnityStrPass():&#160;unity.c'],['../unity__internals_8h.html#ad2cf819d80c1fe3a9649baf4ccdcbced',1,'UnityStrPass():&#160;unity.c']]]
+  ['silent_1051',['Silent',['../struct_u_n_i_t_y___f_i_x_t_u_r_e___t.html#a545e00f43de20ca1e6b98e226030f0ad',1,'UNITY_FIXTURE_T']]],
+  ['size_1052',['size',['../struct_guard_bytes.html#a854352f53b148adc24983a58a1866d66',1,'GuardBytes']]],
+  ['speed_5fcontrol_5fget_1053',['Speed_Control_get',['../_speed___control_8c.html#a12fe3e75e646ad863b4fa9e31ce20e9e',1,'Speed_Control.c']]],
+  ['speedstr_5fupdate_1054',['SpeedSTR_update',['../_speed___control___config_8c.html#aef044303f27d72b57e698176a390c193',1,'SpeedSTR_update():&#160;Speed_Control_Config.c'],['../_speed___control___config_8h.html#aef044303f27d72b57e698176a390c193',1,'SpeedSTR_update():&#160;Speed_Control_Config.c'],['../_motor__test_8h.html#aef044303f27d72b57e698176a390c193',1,'SpeedSTR_update():&#160;Speed_Control_Config.c']]],
+  ['switch_5fget_5ftime_1055',['Switch_get_time',['../_switch_8c.html#a50bca3de5df0fa11ca602bc917c72074',1,'Switch_get_time():&#160;Switch.c'],['../_switch_8h.html#a50bca3de5df0fa11ca602bc917c72074',1,'Switch_get_time():&#160;Switch.c']]],
+  ['switch_5fgetswstate_1056',['SWITCH_getSwState',['../_switch_8c.html#a3fc0936e98daaacc6b7b597fe6a146ea',1,'SWITCH_getSwState():&#160;Switch.c'],['../_switch_8h.html#a3fc0936e98daaacc6b7b597fe6a146ea',1,'SWITCH_getSwState():&#160;Switch.c']]],
+  ['switch_5fid_1057',['Switch_ID',['../structspeed___cfg__str.html#a92f59e1c4186f3df181269f84aa6b35e',1,'speed_Cfg_str::Switch_ID()'],['../struct_switch___cfg__str.html#a493494d5f2c2a32c50bb7b37651d3af6',1,'Switch_Cfg_str::Switch_ID()']]],
+  ['switch_5fstatus_1058',['Switch_status',['../structspeed___cfg__str.html#afafa8d4cb8d2ca3c47fe05007e940b6f',1,'speed_Cfg_str::Switch_status()'],['../struct_switch___cfg__str.html#a646c51ee0622f548ba173c0260cd6552',1,'Switch_Cfg_str::Switch_status()'],['../structtest___cfg__str.html#afafa8d4cb8d2ca3c47fe05007e940b6f',1,'test_Cfg_str::Switch_status()']]]
 ];

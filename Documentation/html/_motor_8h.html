@@ -94,65 +94,110 @@ $(document).ready(function(){initNavTree('_motor_8h.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">Enumerations</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Motor.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_motor___config_8h_source.html">Motor_Config.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_speed___control_8h_source.html">../Speed_Control/Speed_Control.h</a>&quot;</code><br />
 </div>
 <p><a href="_motor_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a07a6e3ae5c6763d5016cf79c0cb44af2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a> { <a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>
-, <a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>
-, <a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2aa9226765af003137d277bb0b39d5744f">LED_FLASH</a>
- }</td></tr>
-<tr class="separator:a07a6e3ae5c6763d5016cf79c0cb44af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2ff9d7aab10b044ab3776d5b6b436692"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a2ff9d7aab10b044ab3776d5b6b436692">MINMUM</a>&#160;&#160;&#160;140</td></tr>
+<tr class="separator:a2ff9d7aab10b044ab3776d5b6b436692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a455b219d48b21108576f53129be38c32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a455b219d48b21108576f53129be38c32">MEDIUM</a>&#160;&#160;&#160;90</td></tr>
+<tr class="separator:a455b219d48b21108576f53129be38c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7144aa2210e7cd9f35160cdcdaa5a648"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a7144aa2210e7cd9f35160cdcdaa5a648">MAXIMUM</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a7144aa2210e7cd9f35160cdcdaa5a648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a5b35294337f49da506342b7a70031815"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a></td></tr>
+<tr class="separator:a5b35294337f49da506342b7a70031815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9257c7bb10f18e855bdce6a8087755e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a9257c7bb10f18e855bdce6a8087755e2">MOTOR_init</a> (void)</td></tr>
-<tr class="separator:a9257c7bb10f18e855bdce6a8087755e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7a32f36a948c894c122d7f56f75fdcc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#ab7a32f36a948c894c122d7f56f75fdcc">MOTOR_getAngel</a> (void)</td></tr>
-<tr class="separator:ab7a32f36a948c894c122d7f56f75fdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c7e9daebc3bc14df1dc485b2d58623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_error_8h.html#aee03127e28c2fce8a862b1154bc09028">ERROR_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#ad5c7e9daebc3bc14df1dc485b2d58623">MOTOR_init</a> (void)</td></tr>
+<tr class="separator:ad5c7e9daebc3bc14df1dc485b2d58623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3179badcad684e7dd8f77157e6cadc13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a3179badcad684e7dd8f77157e6cadc13">MOTOR_getAngel</a> (<a class="el" href="structspeed___cfg__str.html">speed_Cfg_str</a> *SpeedSTR_used)</td></tr>
+<tr class="separator:a3179badcad684e7dd8f77157e6cadc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38e9c5fb5becd4185b37ad0d5ae6d556"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_motor_8h.html#a38e9c5fb5becd4185b37ad0d5ae6d556">MOTOR_update</a> (void)</td></tr>
 <tr class="separator:a38e9c5fb5becd4185b37ad0d5ae6d556"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a07a6e3ae5c6763d5016cf79c0cb44af2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07a6e3ae5c6763d5016cf79c0cb44af2">&#9670;&nbsp;</a></span>MOTOR_ANGEL_t</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7144aa2210e7cd9f35160cdcdaa5a648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7144aa2210e7cd9f35160cdcdaa5a648">&#9670;&nbsp;</a></span>MAXIMUM</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a></td>
+          <td class="memname">#define MAXIMUM&#160;&#160;&#160;10</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a07a6e3ae5c6763d5016cf79c0cb44af2afc0ca8cc6cbe215fd3f1ae6d40255b40"></a>LED_OFF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a07a6e3ae5c6763d5016cf79c0cb44af2add01b80eb93658fb4cf7eb9aceb89a1d"></a>LED_ON&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a07a6e3ae5c6763d5016cf79c0cb44af2aa9226765af003137d277bb0b39d5744f"></a>LED_FLASH&#160;</td><td class="fielddoc"></td></tr>
-</table>
+
+</div>
+</div>
+<a id="a455b219d48b21108576f53129be38c32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455b219d48b21108576f53129be38c32">&#9670;&nbsp;</a></span>MEDIUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MEDIUM&#160;&#160;&#160;90</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ff9d7aab10b044ab3776d5b6b436692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff9d7aab10b044ab3776d5b6b436692">&#9670;&nbsp;</a></span>MINMUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MINMUM&#160;&#160;&#160;140</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a5b35294337f49da506342b7a70031815"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b35294337f49da506342b7a70031815">&#9670;&nbsp;</a></span>MOTOR_ANGEL_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef uint8_t <a class="el" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab7a32f36a948c894c122d7f56f75fdcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7a32f36a948c894c122d7f56f75fdcc">&#9670;&nbsp;</a></span>MOTOR_getAngel()</h2>
+<a id="a3179badcad684e7dd8f77157e6cadc13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3179badcad684e7dd8f77157e6cadc13">&#9670;&nbsp;</a></span>MOTOR_getAngel()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_motor_8h.html#a07a6e3ae5c6763d5016cf79c0cb44af2">MOTOR_ANGEL_t</a> MOTOR_getAngel </td>
+          <td class="memname"><a class="el" href="_motor_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a> MOTOR_getAngel </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structspeed___cfg__str.html">speed_Cfg_str</a> *&#160;</td>
+          <td class="paramname"><em>SpeedSTR_used</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -160,14 +205,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9257c7bb10f18e855bdce6a8087755e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9257c7bb10f18e855bdce6a8087755e2">&#9670;&nbsp;</a></span>MOTOR_init()</h2>
+<a id="ad5c7e9daebc3bc14df1dc485b2d58623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5c7e9daebc3bc14df1dc485b2d58623">&#9670;&nbsp;</a></span>MOTOR_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void MOTOR_init </td>
+          <td class="memname"><a class="el" href="_error_8h.html#aee03127e28c2fce8a862b1154bc09028">ERROR_STATUS</a> MOTOR_init </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>

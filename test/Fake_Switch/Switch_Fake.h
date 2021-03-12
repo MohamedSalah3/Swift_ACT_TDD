@@ -8,6 +8,14 @@
 /*#include "../../source/led/led.h"
 */
 #include "../../source/Motor/Motor.h"
+/***********************************************************
+test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num);
+Param [in] : uint8_t test_num
+Param [in/OUT] :test_Cfg_str* Data_Return
+*
+test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num);
+This is a helper function to read data from input.txt
+************************************************************/
 
 test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num);
 
