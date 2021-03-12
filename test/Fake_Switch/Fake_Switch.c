@@ -185,7 +185,7 @@ uint32_t P_SWITCH_push_time=15;
 	/* Arrange */
   SWITCH_init(&P_Switch);
 
-SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,0)));
+SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,3)));
   /* Assert */
     LONGS_EQUAL(P_SWITCH_push_time, Switch_get_time(&P_Switch));
 }
@@ -204,28 +204,32 @@ TEST_GROUP_RUNNER(Switch_Status)
 }
 
 
+
 test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)
  {
-  FILE* Input_File_Ptr2File = fopen("mm.txt","r+");
-  char* Ptr_to_char;
+  FILE* Input_File_Ptr2File;
+  Input_File_Ptr2File= fopen("Input.txt","r+");
+
+
   char STR_UpSwitch[20];
   char STR_DownSwitch[20];
   char STR_P_Switch[20];
   char timeSTR_P_Switch[5];
-  if(Input_File_Ptr2File){
+
   for(int i=0;i<test_num+2;i++)
   {
   memset(STR_UpSwitch,0,20);
   memset(STR_DownSwitch,0,20);
   memset(STR_P_Switch,0,20);
   /*'-' used To diffentiate between numbers*/
-  memset(timeSTR_P_Switch,'M',5);
+  memset(timeSTR_P_Switch,0,5);
   fscanf(Input_File_Ptr2File,"%s\n",STR_UpSwitch);
   fscanf(Input_File_Ptr2File,"%s\n",STR_DownSwitch);
   fscanf(Input_File_Ptr2File,"%s\n",STR_P_Switch);
   fscanf(Input_File_Ptr2File,"%s\n",timeSTR_P_Switch);
   }
-
+ printf("%d",Input_File_Ptr2File);
+if(Input_File_Ptr2File){
   printf("%s\n",STR_UpSwitch );
   printf("%s\n",STR_DownSwitch );
     printf("%s\n",STR_P_Switch );
@@ -296,8 +300,8 @@ test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num)
   (Data_Return -> Push_Time)=atoi(timeSTR_P_Switch);
   fclose(Input_File_Ptr2File);
 
-
-}else{  printf("Failed To open the file");}
-
+ }else{
+  printf("Failed To open the file");
+  }
 return Data_Return;
   }
