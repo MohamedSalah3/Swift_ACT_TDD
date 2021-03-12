@@ -9,7 +9,8 @@
 
 ERROR_STATUS Speed_Control_init(void);
 
-ERROR_STATUS Speed_Control_get_Switch_state(uint8_t member,SWITCH_STATE_t *Status,uint8_t *time);
+
+speed_Cfg_str* Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used);
 
 ERROR_STATUS Angel_update(MOTOR_ANGEL_t *Angle);
 

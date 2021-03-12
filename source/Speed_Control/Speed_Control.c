@@ -1,34 +1,37 @@
 /*Speed_Control.c*/
 #include "Speed_Control.h"
-
-
-
-static MOTOR_ANGEL_t MOTRO_angel;
-static SWITCH_STATE_t Switch_state;
-
 ERROR_STATUS Speed_Control_init(void)
 {
 	ERROR_STATUS ret=E_OK;
-    MOTRO_angel = MINMUM;
+    MOTOR_angel = MEDIUM;
 	return ret;
 }
 
 
-ERROR_STATUS Speed_Control_get_Switch_state(uint8_t member,SWITCH_STATE_t *Status,uint8_t *time)
+ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used)
 {
-ERROR_STATUS ret=E_OK;
-//ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used)
+	ERROR_STATUS ret=E_OK;
+ret=SWITCH_update(&UpSwitch,&test_data);
+SpeedSTR_used->Switch_ID[UPSWITCH]=	UpSwitch.Switch_ID;
+SpeedSTR_used->Switch_status[UPSWITCH]= UpSwitch.Switch_status;
 
+ret+=SWITCH_update(&DownSwitch,&test_data);
+SpeedSTR_used->Switch_ID[DOWNSWITCH]=	DownSwitch.Switch_ID;
+SpeedSTR_used->Switch_status[DOWNSWITCH] = DownSwitch.Switch_status;
+ret+=SWITCH_update(&P_Switch,&test_data);
+SpeedSTR_used->Switch_ID[P_SWITCH]=	P_Switch.Switch_ID;
+SpeedSTR_used->Switch_status[P_SWITCH] = P_Switch.Switch_status;
+SpeedSTR_used->Push_Time[P_SWITCH] =P_Switch.Push_Time;
 
-    return ret;
+return ret;
 }
 
-ERROR_STATUS Angel_update(MOTOR_ANGEL_t *Angle)
+ERROR_STATUS Angel_update(speed_Cfg_str* SpeedSTR_used)
 {
-  
-  ERROR_STATUS ret=E_OK;
-//ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used)
 
+  ERROR_STATUS ret=E_OK;
+
+ret= Speed_Control_get_Switch_state(&SpeedSTR_get);
 
     return ret;
 }
