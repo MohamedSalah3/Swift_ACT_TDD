@@ -1,0 +1,1 @@
+gcc main.c Motor/Motor.c Motor/Motor_Config.c Switch/Switch.c Switch/Switch.c  Speed_Control/Speed_Control.c  Speed_Control/Speed_Control_Config.c ../test/unity/unity.c ../test/unity/unity_fixture.c ../test/unity/unity_memory.c

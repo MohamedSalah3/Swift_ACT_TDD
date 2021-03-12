@@ -2,6 +2,8 @@
 #ifndef SWITCH_CONFIG_H_
 #define SWITCH_CONFIG_H_
 
+#include "../../test/unity/unity_fixture.h"
+#include "../infrastructure/Error.h"
 #include "../infrastructure/std_types.h"
 /**********************************************************************************/
 /*        Switch state definition                                                 */
@@ -12,11 +14,6 @@ typedef uint8_t SWITCH_STATE_t ;
 #define SW_PRERELEASED 2
 #define SW_RELEASED 3
 
-
-/**********************************************************************************/
-/*        Switch state definition                                                 */
-/**********************************************************************************/
-extern     switch_state_Ptr_to_fun SWITCH_getSwState ; /* Turned into pointer so we can make it point to another fake function */
 
 /**********************************************************************************/
 /*        Switch Structure   definition                                       */
@@ -55,5 +52,11 @@ typedef struct Switch_Cfg_str
 extern Switch_Cfg_str UpSwitch;
 extern Switch_Cfg_str DownSwitch;
 extern Switch_Cfg_str P_Switch;
+/************************************************************************/
+/*						 Pointer To Funcrion  definetion                          */
+/************************************************************************/
+typedef void (*ptr_to_Fun)(void);
+typedef SWITCH_STATE_t (*ptr_to_Fun_Ret_uint8t)(Switch_Cfg_str *);
+
 
 #endif

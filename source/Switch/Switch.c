@@ -5,7 +5,7 @@
 /* Globals */
 
 /* Switch State */
-static SWITCH_STATE_t Switch_State;
+static uint8_t Switch_State;
 
 switch_state_Ptr_to_fun SWITCH_getSwState ;
 
@@ -25,7 +25,7 @@ ERROR_STATUS SWITCH_init(Switch_Cfg_str* Switch_used)
 
   }else
   {
-    Ret=INVALID_PARM
+    Ret=INVALID_PARM;
   }
 return Ret;
 }
@@ -37,7 +37,15 @@ SWITCH_STATE_t  SWITCH_getSwState_real(Switch_Cfg_str* Switch_used)
     return Switch_State;
 }
 
+SWITCH_STATE_t  SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used)
+{/*Go to */
+    Switch_State = (Switch_used -> Switch_status);
+    return Switch_State;
+}
+
+
 ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used)
 {
+
 
 }

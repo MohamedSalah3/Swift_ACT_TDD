@@ -5,7 +5,7 @@ static MOTOR_ANGEL_t MOTRO_angel;
 
 void MOTOR_init(void)
 {
-    MOTRO_angel = LED_OFF;
+    MOTRO_angel = MINMUM;
 }
 
 
@@ -16,5 +16,5 @@ MOTOR_ANGEL_t MOTOR_getAngel(void)
 
 void MOTOR_update(void)
 {
-  /**/
+  /*Write on output text*/
 }
