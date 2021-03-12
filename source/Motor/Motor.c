@@ -25,4 +25,5 @@ void MOTOR_update(void)
 	fprintf(OUTPUT_File_Ptr2File, "%u\n",MOTOR_getAngel(&SpeedSTR_update));
 	fclose(OUTPUT_File_Ptr2File);
  /*Write on output text*/
+ 
 }

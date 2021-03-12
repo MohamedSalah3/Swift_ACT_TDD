@@ -188,6 +188,9 @@ uint32_t P_SWITCH_push_time=15;
   SWITCH_init(&P_Switch);
 
 SWITCH_update(&P_Switch,(Switch_getTestData(&test_data,0)));
+
+
+
   /* Assert */
     LONGS_EQUAL(P_SWITCH_push_time, Switch_get_time(&P_Switch));
 }
