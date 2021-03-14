@@ -27,8 +27,7 @@ TEST(Motor_Angle,complete_output)
 {
 MOTOR_init();
 /* Arrange */
-for(uint8_t test_num=2;test_num < MAX_TESTS;test_num++)
-{
+for(uint8_t test_num=2;test_num < MAX_TESTS;test_num++){
 SWITCH_init(&P_Switch);
 SWITCH_init(&UpSwitch);
 SWITCH_init(&DownSwitch);
