@@ -10,7 +10,9 @@
 #include "../../source/Motor/Motor.h"
 
 #include <stdlib.h>
+
 extern speed_Cfg_str SpeedSTR_update;
+
 static void Motor_TEST_SET_Result_Data(MOTOR_ANGEL_t* expected_Motor_Speed);
 
 test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num);

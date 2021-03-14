@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 	ret=SWITCH_init(&P_Switch);
 	ret=Speed_Control_init();
 	ret=MOTOR_init();
-/*
+
 	while(1)
 	{
 		ret=SWITCH_update(&UpSwitch);
@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
 
 
 	}
-  */
+ 
     return 0;
 
 }

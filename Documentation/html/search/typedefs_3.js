@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['ptr_5fto_5ffun_1079',['ptr_to_Fun',['../_switch___config_8h.html#a85df74cf5fc029b3cedd1fa921e6ec1b',1,'Switch_Config.h']]],
-  ['ptr_5fto_5ffun_5fret_5fuint32t_1080',['ptr_to_Fun_Ret_uint32t',['../_switch___config_8h.html#adc5dd77a67068a87a897a61f14c995bc',1,'Switch_Config.h']]],
-  ['ptr_5fto_5ffun_5fret_5fuint8t_1081',['ptr_to_Fun_Ret_uint8t',['../_switch___config_8h.html#ac106f09b9ec601d812eb990aab790367',1,'Switch_Config.h']]]
+  ['speed_5fcfg_5fstr_178',['speed_Cfg_str',['../_speed___control___config_8h.html#a77c80c37cc0bd9fad78a7aeb9e3c98cd',1,'Speed_Control_Config.h']]],
+  ['switch_5fcfg_5fstr_179',['Switch_Cfg_str',['../_switch___config_8h.html#a99b2e8c0e1c8aafe8ae45d7651aad981',1,'Switch_Config.h']]],
+  ['switch_5fstate_5fptr_5fto_5ffun_180',['switch_state_Ptr_to_fun',['../_switch_8h.html#aad1bedc054e3dc2ba4a37aab1680fbc3',1,'Switch.h']]],
+  ['switch_5fstate_5ft_181',['SWITCH_STATE_t',['../_switch___config_8h.html#a9f2434fe3d1b465ad20bb4d19a2535d5',1,'Switch_Config.h']]]
 ];

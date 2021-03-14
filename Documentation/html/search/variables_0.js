@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['abortframe_1026',['AbortFrame',['../struct_u_n_i_t_y___s_t_o_r_a_g_e___t.html#add1ad6305e99da2ddf841e32dfbd8bd5',1,'UNITY_STORAGE_T']]]
+  ['downswitch_157',['DownSwitch',['../_switch___config_8c.html#a90c70482c27a1825df92bbf520155161',1,'DownSwitch():&#160;Switch_Config.c'],['../_switch___config_8h.html#a90c70482c27a1825df92bbf520155161',1,'DownSwitch():&#160;Switch_Config.c']]]
 ];

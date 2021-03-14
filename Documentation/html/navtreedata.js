@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Swift Act Test Driven Development", "index.html", [
+  [ "Mohamed_Ahmed_Speed_ControlTDD", "index.html", [
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -36,13 +36,11 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", "globals_defs" ]
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -50,11 +48,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_error_8h.html",
-"structspeed___cfg__str.html",
-"unity_8h.html#a79551dc8157d4c251af9317e040de4c6",
-"unity__fixture_8h.html#a213d1795588db5f14467a3046bcf2dc7",
-"unity__internals_8h.html#ac3077dcaeae5edcb15ad0514688b3501"
+"_error_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

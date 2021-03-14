@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['downswitch_1033',['DownSwitch',['../_switch___config_8c.html#a90c70482c27a1825df92bbf520155161',1,'DownSwitch():&#160;Switch_Config.c'],['../_switch___config_8h.html#a90c70482c27a1825df92bbf520155161',1,'DownSwitch():&#160;Switch_Config.c']]]
+  ['motor_5fangel_159',['MOTOR_angel',['../structspeed___cfg__str.html#a712a858974a53838308b6ee9202ddd4a',1,'speed_Cfg_str']]]
 ];

@@ -59,6 +59,21 @@ LONGS_EQUAL(expected_Angle, SpeedSTR_update.MOTOR_angel);
 
 
 }
+TEST(Speed_Control,MULTIPLE_INIT_Check)
+{
+  /*!
+    * @par Given : init function should called once
+    * @par When  : Speed_Control_init() is called
+    * @par Then  : ERROR_STATUS should return error
+*/
+ERROR_STATUS Exptected_error=MULTIPLE_INIT;
+/*Arrange*/
+Speed_Control_init();
+
+LONGS_EQUAL(Exptected_error, Speed_Control_init());
+
+
+}
 
 
 
@@ -99,10 +114,25 @@ LONGS_EQUAL(expected_Angle,Angel_update(&SpeedSTR_update));
 
 
 }
+
+TEST(Speed_Control,Update_P_Switch_Check_Response)
+{
+  /*!
+    * @par Given : P_switch is in unknown state
+    * @par When  : SWITCH_init(&P_Switch) is called
+    *when : SWITCH_update is called
+    *when p is pressed for more than 30 ms decrease speed
+    *@par Then  : Angle update should response will for different push times
+  */
+
+
+}
+
 TEST_GROUP_RUNNER(Speed_Control)
 {
   RUN_TEST_CASE(Speed_Control, Angle_after_init);
   RUN_TEST_CASE(Speed_Control, Update_Boundries);
-
+//  RUN_TEST_CASE(Speed_Control,Update_P_Switch_Check_Response);
+RUN_TEST_CASE(Speed_Control,MULTIPLE_INIT_Check);
 
 }

@@ -1,6 +1,5 @@
 var _motor__test_8c =
 [
-    [ "MAX_TESTS", "_motor__test_8c.html#a2a77d2f2c5b698c69c19e1f8782bf709", null ],
     [ "TEST", "_motor__test_8c.html#aa166d6dfc2fb4784d4391af30e971c12", null ],
     [ "TEST_GROUP", "_motor__test_8c.html#a93944240a2e5a18620e233144df8ed44", null ],
     [ "TEST_GROUP_RUNNER", "_motor__test_8c.html#a4ff46e851eefb3fbe96d94c85fc9639d", null ],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Swift Act Test Driven Development: test/Speed_Control_test/Speed_Control_test.c File Reference</title>
+<title>Mohamed_Ahmed_Speed_ControlTDD: test/Speed_Control_test/Speed_Control_test.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,10 +30,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Swift Act Test Driven Development
-   &#160;<span id="projectnumber">0.1</span>
+   <div id="projectname">Mohamed_Ahmed_Speed_ControlTDD
+   &#160;<span id="projectnumber">0.2</span>
    </div>
-   <div id="projectbrief">Motor Control</div>
+   <div id="projectbrief">How to use Test driven development</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -104,9 +104,11 @@ $(document).ready(function(){initNavTree('_speed___control__test_8c.html',''); i
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_speed___control_8h_source.html">../../source/Speed_Control/Speed_Control.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_switch___fake_8h_source.html">../Fake_Switch/Switch_Fake.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="unity__fixture_8h_source.html">../unity/unity_fixture.h</a>&quot;</code><br />
+<code>#include &quot;../unity/unity_fixture.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="_speed___control__test_8h_source.html">Speed_Control_test.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="_speed___control__test_8c_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ae6e37272d287290c3ce5c417f7589f07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_speed___control__test_8c.html#ae6e37272d287290c3ce5c417f7589f07">EXPOSE_LED_INTERNALS</a></td></tr>
@@ -122,8 +124,12 @@ Functions</h2></td></tr>
 <tr class="separator:adb21499fa2c49601990e2c203d1db569"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa0e94cecb7c8fd725ca967677c5d4a4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_speed___control__test_8c.html#aa0e94cecb7c8fd725ca967677c5d4a4e">TEST</a> (Speed_Control, Angle_after_init)</td></tr>
 <tr class="separator:aa0e94cecb7c8fd725ca967677c5d4a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c90dd298f4918b77380a9ca975c109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_speed___control__test_8c.html#a86c90dd298f4918b77380a9ca975c109">TEST</a> (Speed_Control, MULTIPLE_INIT_Check)</td></tr>
+<tr class="separator:a86c90dd298f4918b77380a9ca975c109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c1dab5652ad807b84d7b3fa653b5a85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_speed___control__test_8c.html#a8c1dab5652ad807b84d7b3fa653b5a85">TEST</a> (Speed_Control, Update_Boundries)</td></tr>
 <tr class="separator:a8c1dab5652ad807b84d7b3fa653b5a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f95e33fb50bad6fc14f265dea803b0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_speed___control__test_8c.html#a9f95e33fb50bad6fc14f265dea803b0a">TEST</a> (Speed_Control, Update_P_Switch_Check_Response)</td></tr>
+<tr class="separator:a9f95e33fb50bad6fc14f265dea803b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeee8c2d5b58900a4fbef5b7535099401"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_speed___control__test_8c.html#aeee8c2d5b58900a4fbef5b7535099401">TEST_GROUP_RUNNER</a> (Speed_Control)</td></tr>
 <tr class="separator:aeee8c2d5b58900a4fbef5b7535099401"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -140,11 +146,13 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00005">5</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aa0e94cecb7c8fd725ca967677c5d4a4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0e94cecb7c8fd725ca967677c5d4a4e">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0e94cecb7c8fd725ca967677c5d4a4e">&#9670;&nbsp;</a></span>TEST() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,10 +180,45 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>When : Speed_Control_init() is called</dt><dd></dd></dl>
 <dl class="section user"><dt>Then : MOTOR is in MEDIUM state</dt><dd></dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00044">44</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
+
+</div>
+</div>
+<a id="a86c90dd298f4918b77380a9ca975c109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c90dd298f4918b77380a9ca975c109">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Speed_Control&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MULTIPLE_INIT_Check&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section user"><dt>Given : init function should called once</dt><dd></dd></dl>
+<dl class="section user"><dt>When : Speed_Control_init() is called</dt><dd></dd></dl>
+<dl class="section user"><dt>Then : ERROR_STATUS should return error</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00062">62</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
+
 </div>
 </div>
 <a id="a8c1dab5652ad807b84d7b3fa653b5a85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c1dab5652ad807b84d7b3fa653b5a85">&#9670;&nbsp;</a></span>TEST() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c1dab5652ad807b84d7b3fa653b5a85">&#9670;&nbsp;</a></span>TEST() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,6 +245,41 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Given : MOTOR_angel is in unknown state</dt><dd></dd></dl>
 <dl class="section user"><dt>When : Speed_Control_init() is called</dt><dd></dd></dl>
 <dl class="section user"><dt>Then : MOTOR is in MEDIUM state</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00083">83</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
+
+</div>
+</div>
+<a id="a9f95e33fb50bad6fc14f265dea803b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f95e33fb50bad6fc14f265dea803b0a">&#9670;&nbsp;</a></span>TEST() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST </td>
+          <td>(</td>
+          <td class="paramtype">Speed_Control&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Update_P_Switch_Check_Response&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section user"><dt>Given : P_switch is in unknown state</dt><dd></dd></dl>
+<dl class="section user"><dt>When : SWITCH_init(&amp;P_Switch) is called</dt><dd>when : SWITCH_update is called when p is pressed for more than 30 ms decrease speed </dd></dl>
+<dl class="section user"><dt>Then : Angle update should response will for different push times</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00118">118</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
 
 </div>
 </div>
@@ -239,6 +317,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00131">131</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
+
 </div>
 </div>
 <a id="aed9a34c5994240d7ea550ae83b9ed597"></a>
@@ -257,6 +337,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00024">24</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
+
 </div>
 </div>
 <a id="adb21499fa2c49601990e2c203d1db569"></a>
@@ -274,6 +356,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_speed___control__test_8c_source.html#l00033">33</a> of file <a class="el" href="_speed___control__test_8c_source.html">Speed_Control_test.c</a>.</p>
 
 </div>
 </div>

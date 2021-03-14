@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['motor_5fangel_5ft_1078',['MOTOR_ANGEL_t',['../_motor_8h.html#a5b35294337f49da506342b7a70031815',1,'MOTOR_ANGEL_t():&#160;Motor.h'],['../_speed___control___config_8h.html#a5b35294337f49da506342b7a70031815',1,'MOTOR_ANGEL_t():&#160;Speed_Control_Config.h']]]
+  ['ptr_5fto_5ffun_175',['ptr_to_Fun',['../_switch___config_8h.html#a85df74cf5fc029b3cedd1fa921e6ec1b',1,'Switch_Config.h']]],
+  ['ptr_5fto_5ffun_5fret_5fuint32t_176',['ptr_to_Fun_Ret_uint32t',['../_switch___config_8h.html#adc5dd77a67068a87a897a61f14c995bc',1,'Switch_Config.h']]],
+  ['ptr_5fto_5ffun_5fret_5fuint8t_177',['ptr_to_Fun_Ret_uint8t',['../_switch___config_8h.html#ac106f09b9ec601d812eb990aab790367',1,'Switch_Config.h']]]
 ];
