@@ -179,10 +179,10 @@ And Motor Angle member which the Update function used to store its updated Angle
 <p>
  So these are The functions used in this module
  </p>
+
+
 >```c
->
 >ERROR_STATUS Speed_Control_init(void);
->
 >```
 
 
