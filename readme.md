@@ -48,45 +48,44 @@ The Method Used here For Function Prototyping Was To Return Error Status
 Which is basically 
 </p>
 
-> 	```c
-> 	typedef uint8_t ERROR_STATUS;
-> 	```
+> ```c
+> typedef uint8_t ERROR_STATUS;
+> ```
 
->	 ```c
->	  #define E_NOK        1
->	 ```
+>```c
+>#define E_NOK        1
+>```
 
->	```c
->	#define E_OK         0 
->	```
+>```c
+>#define E_OK         0 
+>```
 
->	```c
->	#define NULL_PTR    2
->	```
+>```c
+>#define NULL_PTR    2
+>```
 
->	```c
->	#define NOT_INIT    4
->	```
+>```c
+>#define NOT_INIT    4
+>```
 
->	```c
->	#define MULTIPLE_INIT 6
->	```
+>```c
+>#define MULTIPLE_INIT 6
+>```
 
->	```c
->	#define INVALID_PARM  8
->	```
+>```c
+>#define INVALID_PARM  8
+>```
 
 <p>
 And with it i defied Multiple Macros to make it readable , By using this  method i will be sure that there is a feedback from the function of what  really happened .
 
 So these are The functions used in this module 
-</p>
->	```c
->	ERROR_STATUS  SWITCH_init(Switch_Cfg_str* Switch_used);
->	```
+>```c
+>								ERROR_STATUS  SWITCH_init(Switch_Cfg_str* Switch_used);
+>```
 
 >	```c
->	ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str*Test_data);
+>	ERROR_STATUS SWITCH_update(Switch_Cfg_str*Switch_used,test_Cfg_str*Test_data);
 >	```
 <p>
 The most important Parts of this Module Are lies here When we make a structure to represent every button we have to make usable for both testing and production and actuallyit was so useful 
@@ -97,43 +96,37 @@ push time was exclusive for p switch
 and lastly programming mode used in init function to swap the used functions when production and when testing as we have used a pointer to function to do this trick .
 </p>
 
->   typedef struct Switch_Cfg_str{
-
-
+>```c
+>	 typedef struct Switch_Cfg_str{
 >	uint8_t GPIO;
-
 >	uint8_t pins;
-
 >	uint8_t Switch_ID;
+>	SWITCH_STATE_t Switch_status;
+>	uint8_t Programming_Mode;
+>	uint32_t Push_Time;
+>	 uint8_t u8_Mult_init_detect;
+>     }Switch_Cfg_str;    
+>```
 
->   SWITCH_STATE_t Switch_status;
-
->   uint8_t Programming_Mode;
-
->   uint32_t Push_Time;
-
->   uint8_t u8_Mult_init_detect;
-
->   }Switch_Cfg_str;
 <p>
 As You can see we swapped this functions in the init function using pointer to function 
 </p>
 
->	```c
+>```c
 >	SWITCH_STATE_t  SWITCH_getSwState_real(Switch_Cfg_str* Switch_used);
->	```
+>```
 
->	```c
+>```c
 >	SWITCH_STATE_t  SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used);
->	```
+>```
 
->	```c
+>```c
 >	uint32_t  SWITCH_getP_time_real(Switch_Cfg_str* Switch_used);
->	```
+>```
 
->	```c
+>```c
 >	uint32_t  SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used);
->	```
+>```
 <p>
 These are the objects which was created
 </p>
@@ -147,10 +140,9 @@ These are the objects which was created
 <h3>  Speed Control Module</h3>
 <p>
 In This Module Basically What We are doing is to take Data out of object to inject it in another Object . 
-
 so in this module we constructed a structure which will take the data from all push button structure and put it in a new structure 
 the data we were most intrested in are Switches status and push time so we created this structure to handle this task .
-</p>
+
 > 	 ```c
 > 	  typedef struct speed_Cfg_str  {  
 > 	 ```
