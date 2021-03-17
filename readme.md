@@ -81,12 +81,12 @@ And with it i defied Multiple Macros to make it readable , By using this  method
 
 So these are The functions used in this module 
 >```c
->								ERROR_STATUS  SWITCH_init(Switch_Cfg_str* Switch_used);
+>ERROR_STATUS  SWITCH_init(Switch_Cfg_str* Switch_used);
 >```
 
->	```c
->	ERROR_STATUS SWITCH_update(Switch_Cfg_str*Switch_used,test_Cfg_str*Test_data);
->	```
+>```c
+>ERROR_STATUS SWITCH_update(Switch_Cfg_str*Switch_used,test_Cfg_str*Test_data);
+>```
 <p>
 The most important Parts of this Module Are lies here When we make a structure to represent every button we have to make usable for both testing and production and actuallyit was so useful 
 Members that was so useful while coding are Switch id , Switch status , push time and lastly Programming mode.
@@ -97,7 +97,7 @@ and lastly programming mode used in init function to swap the used functions whe
 </p>
 
 >```c
->	 typedef struct Switch_Cfg_str{
+> typedef struct Switch_Cfg_str{
 >	uint8_t GPIO;
 >	uint8_t pins;
 >	uint8_t Switch_ID;
@@ -143,51 +143,44 @@ In This Module Basically What We are doing is to take Data out of object to inje
 so in this module we constructed a structure which will take the data from all push button structure and put it in a new structure 
 the data we were most intrested in are Switches status and push time so we created this structure to handle this task .
 
-> 	 ```c
-> 	  typedef struct speed_Cfg_str  {  
-> 	 ```
+> ```c
+>    typedef struct speed_Cfg_str  {  
+>    uint8_t Switch_ID[3];
+> ```
 
-> 	 ```c
-> 	  uint8_t Switch_ID[3];
-> 	 ```
 <p>
 So Whats really happening here is we used the switch id from switch module as an index to this array member of our struct to Update all three buttons in one object
 </p>
 
-> 	 ```c
-> 	  SWITCH_STATE_t Switch_status[3];
-> 	 ```
+> ```c
+>   SWITCH_STATE_t Switch_status[3];
+> ```
 
 <p>
 as you can see Push time is also here to take the value stored in push time member in the first Module(switch module)
 </p>
 
->	```c
->	uint32_t Push_Time;
->	```
+>```c
+>uint32_t Push_Time;
+>```
 
 <p>
 And Motor Angle member which the Update function used to store its updated Angle on it 
 </p>
->   MOTOR_ANGEL_t MOTOR_angel;
 
+>
 > 	 ```c
-> 	  uint8_t Programming_Mode;}
+> 	   MOTOR_ANGEL_t MOTOR_angel;
+> 	   uint8_t Programming_Mode;
+> 	  }speed_Cfg_str;
+> 	   extern speed_Cfg_str SpeedSTR_update;
 > 	 ```
 
-> 	 ```c
-> 	  speed_Cfg_str;
-> 	 ```
-
->```c
-> extern speed_Cfg_str SpeedSTR_update;
->```
 <p>
  So these are The functions used in this module
  </p>
 >```c
->   ]
->ERROR_STATUS Speed_Control_init(void);
+>   ERROR_STATUS Speed_Control_init(void);
 >ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used);
 >MOTOR_ANGEL_t Angel_update(speed_Cfg_str* SpeedSTR_used);
 >
@@ -198,17 +191,17 @@ And Motor Angle member which the Update function used to store its updated Angle
 In This Module Basically What We are doing is to take Data out of object to Print it in a text file  . 
 </p>
 
->	 ```c
->	  ERROR_STATUS MOTOR_init(void);
->	 ```
+>```c
+>  ERROR_STATUS MOTOR_init(void);
+>```
 
->	```c
->	MOTOR_ANGEL_t MOTOR_getAngel(speed_Cfg_str* SpeedSTR_used);
->	```
+>```c
+>MOTOR_ANGEL_t MOTOR_getAngel(speed_Cfg_str* SpeedSTR_used);
+>```
 
->	```c
->	void MOTOR_update(void);
->	```
+>```c
+>void MOTOR_update(void);
+>```
 
 <h1> How To Run This Project  </h1>
 
