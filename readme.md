@@ -130,11 +130,13 @@ As You can see we swapped this functions in the init function using pointer to f
 <p>
 These are the objects which was created
 </p>
->   extern Switch_Cfg_str UpSwitch;
-
->   extern Switch_Cfg_str DownSwitch;
-
->   extern Switch_Cfg_str P_Switch;
+>```c
+>extern Switch_Cfg_str UpSwitch;
+>
+>extern Switch_Cfg_str DownSwitch;
+>
+>extern Switch_Cfg_str P_Switch;
+>```
 
 
 <h3>  Speed Control Module</h3>
@@ -169,18 +171,16 @@ And Motor Angle member which the Update function used to store its updated Angle
 </p>
 
 >
-> 	 ```c
-> 	   MOTOR_ANGEL_t MOTOR_angel;
-> 	   uint8_t Programming_Mode;
-> 	  }speed_Cfg_str;
-> 	   extern speed_Cfg_str SpeedSTR_update;
-> 	 ```
+> ```c
+>    MOTOR_ANGEL_t MOTOR_angel;
+>    uint8_t Programming_Mode;
+>   }speed_Cfg_str;
+>    extern speed_Cfg_str SpeedSTR_update;
+> ```
 
 <p>
  So these are The functions used in this module
  </p>
-
-
 >```c
 >ERROR_STATUS Speed_Control_init(void);
 >```
