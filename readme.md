@@ -130,6 +130,7 @@ As You can see we swapped this functions in the init function using pointer to f
 <p>
 These are the objects which was created
 </p>
+
 >```c
 >	extern Switch_Cfg_str UpSwitch;
 >```
