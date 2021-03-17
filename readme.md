@@ -133,9 +133,11 @@ These are the objects which was created
 >```c
 >	extern Switch_Cfg_str UpSwitch;
 >```
+
 >```c
 >	extern Switch_Cfg_str DownSwitch;
 >```
+
 >```c
 >	extern Switch_Cfg_str P_Switch;
 >```
@@ -184,13 +186,12 @@ And Motor Angle member which the Update function used to store its updated Angle
  So these are The functions used in this module
  </p>
 
-
 >```c
->ERROR_STATUS Speed_Control_init(void);
+>	ERROR_STATUS Speed_Control_init(void);
 >```
 
 >```c
->ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used);
+>	ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used);
 >```
 
 
