@@ -48,9 +48,9 @@ The Method Used here For Function Prototyping Was To Return Error Status
 Which is basically 
 </p>
 
-> typedef uint8_t ERROR_STATUS;
+> 	typedef uint8_t ERROR_STATUS;
 
-> #define E_NOK        1
+>	 #define E_NOK        1
 
 >	#define E_OK         0 
 
@@ -124,27 +124,31 @@ In This Module Basically What We are doing is to take Data out of object to inje
 so in this module we constructed a structure which will take the data from all push button structure and put it in a new structure 
 the data we were most intrested in are Switches status and push time so we created this structure to handle this task .
 </p>
->  typedef struct speed_Cfg_str  
->  {  
->  uint8_t Switch_ID[3];
+> 	 typedef struct speed_Cfg_str  {  
+
+> 	 uint8_t Switch_ID[3];
 <p>
 So Whats really happening here is we used the switch id from switch module as an index to this array member of our struct to Update all three buttons in one object
 </p>
->  SWITCH_STATE_t Switch_status[3];
+
+> 	 SWITCH_STATE_t Switch_status[3];
+
 <p>
 as you can see Push time is also here to take the value stored in push time member in the first Module(switch module)
 </p>
+
 >	uint32_t Push_Time;
+
 <p>
 And Motor Angle member which the Update function used to store its updated Angle on it 
 </p>
 >   MOTOR_ANGEL_t MOTOR_angel;
    
->  uint8_t Programming_Mode;}
+> 	 uint8_t Programming_Mode;}
 
->  speed_Cfg_str;
+> 	 speed_Cfg_str;
 
-> extern speed_Cfg_str SpeedSTR_update;
+>	 extern speed_Cfg_str SpeedSTR_update;
 <p>
  So these are The functions used in this module
  </p>
