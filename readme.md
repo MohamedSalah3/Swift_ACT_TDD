@@ -179,21 +179,19 @@ And Motor Angle member which the Update function used to store its updated Angle
 > 	  speed_Cfg_str;
 > 	 ```
 
->	 ```c
->	  extern speed_Cfg_str SpeedSTR_update;
->	 ```
+>```c
+> extern speed_Cfg_str SpeedSTR_update;
+>```
 <p>
  So these are The functions used in this module
  </p>
->	```c
->   ERROR_STATUS Speed_Control_init(void);
->	```
->	```c
->	ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used);
->	```
->	```c
->   MOTOR_ANGEL_t Angel_update(speed_Cfg_str* SpeedSTR_used);
->	```
+>```c
+>   ]
+>ERROR_STATUS Speed_Control_init(void);
+>ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str* SpeedSTR_used);
+>MOTOR_ANGEL_t Angel_update(speed_Cfg_str* SpeedSTR_used);
+>
+>```
 
 <h3>  Motor Module</h3>
 <p>
