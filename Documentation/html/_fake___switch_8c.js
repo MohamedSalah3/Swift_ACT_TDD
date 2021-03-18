@@ -1,0 +1,27 @@
+var _fake___switch_8c =
+[
+    [ "Switch_getTestData", "_fake___switch_8c.html#a911e5a94b112ac6c8414d3c1e02dc394", null ],
+    [ "TEST", "_fake___switch_8c.html#a1654422b334a0d9467599f8d9addae2a", null ],
+    [ "TEST", "_fake___switch_8c.html#ac1ed2eb7aa99e36068b8574ba98cda9e", null ],
+    [ "TEST", "_fake___switch_8c.html#a2e2fbf39ebdbc71d107f7ac8d8660650", null ],
+    [ "TEST", "_fake___switch_8c.html#abff71f2dd24a7047598ce5b243001399", null ],
+    [ "TEST", "_fake___switch_8c.html#a5bc9bd360a3736e3c640c3cd09016aaf", null ],
+    [ "TEST", "_fake___switch_8c.html#ae23750c25965bc0aa07b0e6a4288f6ab", null ],
+    [ "TEST", "_fake___switch_8c.html#a4bc8442881d16ec59629a8dd492aab99", null ],
+    [ "TEST", "_fake___switch_8c.html#a3bb847ea8aa1149b992869a522c32cef", null ],
+    [ "TEST", "_fake___switch_8c.html#a124e1c6a0d10a67c6a9b43214e519f2d", null ],
+    [ "TEST", "_fake___switch_8c.html#adccf361db2b5fe67632b6470372d731b", null ],
+    [ "TEST", "_fake___switch_8c.html#ac027815bb6cd211fb3a53f9366bd8d97", null ],
+    [ "TEST", "_fake___switch_8c.html#a928a562c3af996ae30e2538861515d13", null ],
+    [ "TEST", "_fake___switch_8c.html#a7c64aab94b236898629f89a676984f6f", null ],
+    [ "TEST", "_fake___switch_8c.html#a1aed65e0ab9a715594b1c9792b0119a3", null ],
+    [ "TEST", "_fake___switch_8c.html#a3d95aaa6072f6738615973353168f0ab", null ],
+    [ "TEST", "_fake___switch_8c.html#ad90ad07481125ded7fa4e14abaf225c9", null ],
+    [ "TEST", "_fake___switch_8c.html#a199868e88077692dd35a96f1e1c4482d", null ],
+    [ "TEST", "_fake___switch_8c.html#a5fd07860d95c864e5ecd13d38f2e6289", null ],
+    [ "TEST_GROUP", "_fake___switch_8c.html#ad1ac7369158dd3548fa23e3ca11b946a", null ],
+    [ "TEST_GROUP", "_fake___switch_8c.html#a7b04501864811d0b71a94d9cce85c6dd", null ],
+    [ "TEST_GROUP_RUNNER", "_fake___switch_8c.html#ad4a4c1020b5cbe15b6de3354073161e7", null ],
+    [ "TEST_SETUP", "_fake___switch_8c.html#a869aa6fba093b40a948cdfffd2d05b67", null ],
+    [ "TEST_TEAR_DOWN", "_fake___switch_8c.html#a764c59ef78aa86f374db8f510b183912", null ]
+];
