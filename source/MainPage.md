@@ -48,22 +48,28 @@ Switch  , Speed Control , Motor .
 The Method Used here For Function Prototyping Was To Return Error Status 
 Which is basically 
 </p>
-> typedef uint8_t ERROR_STATUS;
-> #define E_NOK        1
->#define E_OK         0 
->#define NULL_PTR    2
->#define NOT_INIT    4
->#define MULTIPLE_INIT 6
->#define INVALID_PARM  8
+>	 typedef uint8_t ERROR_STATUS;
+>	
+>	 #define E_NOK        1
+>	
+> 	#define E_OK         0 
+>	
+> 	#define NULL_PTR    2
+>	
+> 	#define NOT_INIT    4
+>	
+> 	#define MULTIPLE_INIT 6
+>	
+> 	#define INVALID_PARM  8
 
 <p>
 And with it i defied Multiple Macros to make it readable , By using this  method i will be sure that there is a feedback from the function of what  really happened .
 
 So these are The functions used in this module 
 </p>
->ERROR_STATUS  SWITCH_init(Switch_Cfg_str* Switch_used);
+>	ERROR_STATUS  SWITCH_init(Switch_Cfg_str* Switch_used);
 
->ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str*Test_data);
+>	ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str*Test_data);
 <p>
 The most important Parts of this Module Are lies here When we make a structure to represent every button we have to make usable for both testing and production and actuallyit was so useful 
 Members that was so useful while coding are Switch id , Switch status , push time and lastly Programming mode.
@@ -94,13 +100,13 @@ and lastly programming mode used in init function to swap the used functions whe
 As You can see we swapped this functions in the init function using pointer to function 
 </p>
 
->SWITCH_STATE_t  SWITCH_getSwState_real(Switch_Cfg_str* Switch_used);
+>	SWITCH_STATE_t  SWITCH_getSwState_real(Switch_Cfg_str* Switch_used);
 
->SWITCH_STATE_t  SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used);
+>	SWITCH_STATE_t  SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used);
 
->uint32_t  SWITCH_getP_time_real(Switch_Cfg_str* Switch_used);
+>	uint32_t  SWITCH_getP_time_real(Switch_Cfg_str* Switch_used);
 
->uint32_t  SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used);
+>	uint32_t  SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used);
 <p>
 These are the objects which was created
 </p>
@@ -117,14 +123,14 @@ In This Module Basically What We are doing is to take Data out of object to inje
 
 so in this module we constructed a structure which will take the data from all push button structure and put it in a new structure 
 the data we were most intrested in are Switches status and push time so we created this structure to handle this task .
-</p>
->  typedef struct speed_Cfg_str
->  
->  {  uint8_t Switch_ID[3];
+
+>  	typedef struct speed_Cfg_str
+>  	
+> 	 {  uint8_t Switch_ID[3];
 <p>
 So Whats really happening here is we used the switch id from switch module as an index to this array member of our struct to Update all three buttons in one object
 </p>
->  SWITCH_STATE_t Switch_status[3];
+> 	 SWITCH_STATE_t Switch_status[3];
 <p>
 as you can see Push time is also here to take the value stored in push time member in the first Module(switch module)
 </p>
@@ -138,7 +144,7 @@ And Motor Angle member which the Update function used to store its updated Angle
 >
 >  speed_Cfg_str;
 
-> extern speed_Cfg_str SpeedSTR_update;
+> 	extern speed_Cfg_str SpeedSTR_update;
 <p>
  So these are The functions used in this module
  </p>
@@ -154,11 +160,18 @@ And Motor Angle member which the Update function used to store its updated Angle
 In This Module Basically What We are doing is to take Data out of object to Print it in a text file  . 
 </p>
 >	 ERROR_STATUS MOTOR_init(void);
->			
+>					
 >	MOTOR_ANGEL_t MOTOR_getAngel(speed_Cfg_str* SpeedSTR_used);
->			
+>					
 >	void MOTOR_update(void);
 >
 
 <h1> How To Run This Project  </h1>
 
+Go To  Project Folder -> Source -> you will find a file called (Click Me Twice ) thats a batch file i used instead of writing a Make file This file contains 
+
+gcc -D MAX_TESTS=10 main.c Motor/Motor.c  Switch/Switch_Config.c Switch/Switch.c  Speed_Control/Speed_Control.c  Speed_Control/Speed_Control_Config.c ../test/unity/unity.c ../test/unity/unity_fixture.c ../test/unity/unity_memory.c ../test/Fake_Switch/Fake_Switch.c  ../test/Speed_Control_test/Speed_Control_test.c ../test/Motor_test/Motor_test.c
+
+a
+
+And Thats How You will run the project .... Please note if you wanna Change the number of test edit this batchfile with the number of tests Required 

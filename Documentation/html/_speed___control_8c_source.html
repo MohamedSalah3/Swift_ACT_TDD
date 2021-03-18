@@ -138,47 +138,50 @@ $(document).ready(function(){initNavTree('_speed___control_8c_source.html',''); 
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="_speed___control_8c.html#ab1c8f180ee4dc80d5f09cea8264e118f">   40</a></span>&#160;    <a class="code" href="_speed___control___config_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a> <a class="code" href="_speed___control_8c.html#ab1c8f180ee4dc80d5f09cea8264e118f">Angel_update</a>(<a class="code" href="structspeed___cfg__str.html">speed_Cfg_str</a>* SpeedSTR_used)</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;uint32_t time = (SpeedSTR_used -&gt; Push_Time);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordflow">if</span>(SpeedSTR_used -&gt; Switch_status[<a class="code" href="_switch___config_8h.html#ab493afe671e6c8c54c1db75ff8316003">UPSWITCH</a>] == <a class="code" href="_switch___config_8h.html#ae21777d59e7ee640d4ab70cbfbb1c2b6">SW_PREPRESSED</a>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{<span class="keywordflow">if</span>(SpeedSTR_used-&gt; MOTOR_angel != <a class="code" href="_speed___control___config_8h.html#a7144aa2210e7cd9f35160cdcdaa5a648">MAXIMUM</a>)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    SpeedSTR_used-&gt; MOTOR_angel--;}</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordflow">if</span>(SpeedSTR_used -&gt; Switch_status[<a class="code" href="_switch___config_8h.html#a4721fdd5b61e8f0fcfe57e8217ec67f0">DOWNSWITCH</a>] == <a class="code" href="_switch___config_8h.html#ae21777d59e7ee640d4ab70cbfbb1c2b6">SW_PREPRESSED</a>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{<span class="keywordflow">if</span>(SpeedSTR_used-&gt; MOTOR_angel != <a class="code" href="_speed___control___config_8h.html#a2ff9d7aab10b044ab3776d5b6b436692">MINMUM</a>)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SpeedSTR_used-&gt; MOTOR_angel++;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordflow">if</span>(SpeedSTR_used -&gt; Switch_status[<a class="code" href="_switch___config_8h.html#ad812a8eccb3f424ea432305e3d01e3f2">P_SWITCH</a>] == <a class="code" href="_switch___config_8h.html#aec61eeea1d29a14d87b10bf91866358f">SW_PRESSED</a>)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span>(time&gt;30){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">while</span>(time -= 30)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {   <span class="keywordflow">if</span>(SpeedSTR_used-&gt; MOTOR_angel != <a class="code" href="_speed___control___config_8h.html#a2ff9d7aab10b044ab3776d5b6b436692">MINMUM</a>)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {   SpeedSTR_used-&gt; MOTOR_angel++;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> (SpeedSTR_used -&gt; MOTOR_angel) ;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;uint32_t time = (SpeedSTR_used -&gt; Push_Time);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordflow">if</span>(SpeedSTR_used -&gt; Switch_status[<a class="code" href="_switch___config_8h.html#ab493afe671e6c8c54c1db75ff8316003">UPSWITCH</a>] == <a class="code" href="_switch___config_8h.html#ae21777d59e7ee640d4ab70cbfbb1c2b6">SW_PREPRESSED</a>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{<span class="keywordflow">if</span>(SpeedSTR_used-&gt; MOTOR_angel != <a class="code" href="_speed___control___config_8h.html#a7144aa2210e7cd9f35160cdcdaa5a648">MAXIMUM</a>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    SpeedSTR_used-&gt; MOTOR_angel--;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordflow">if</span>(SpeedSTR_used -&gt; Switch_status[<a class="code" href="_switch___config_8h.html#a4721fdd5b61e8f0fcfe57e8217ec67f0">DOWNSWITCH</a>] == <a class="code" href="_switch___config_8h.html#ae21777d59e7ee640d4ab70cbfbb1c2b6">SW_PREPRESSED</a>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{<span class="keywordflow">if</span>(SpeedSTR_used-&gt; MOTOR_angel != <a class="code" href="_speed___control___config_8h.html#a2ff9d7aab10b044ab3776d5b6b436692">MINMUM</a>)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    SpeedSTR_used-&gt; MOTOR_angel++;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordflow">if</span>(SpeedSTR_used -&gt; Switch_status[<a class="code" href="_switch___config_8h.html#ad812a8eccb3f424ea432305e3d01e3f2">P_SWITCH</a>] == <a class="code" href="_switch___config_8h.html#aec61eeea1d29a14d87b10bf91866358f">SW_PRESSED</a>)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span>(time&gt;30){</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">while</span>(time -= 30)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {   <span class="keywordflow">if</span>(SpeedSTR_used-&gt; MOTOR_angel != <a class="code" href="_speed___control___config_8h.html#a2ff9d7aab10b044ab3776d5b6b436692">MINMUM</a>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        {   SpeedSTR_used-&gt; MOTOR_angel++;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> (SpeedSTR_used -&gt; MOTOR_angel) ;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">/* Arrange */</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="_speed___control_8c.html#a878bc5fb098f7f39c55aa035b2e66a55">   70</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="_speed___control_8c.html#a878bc5fb098f7f39c55aa035b2e66a55">speed_st_Testing_Fail</a>(<a class="code" href="_speed___control___config_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a> Angle)</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="_motor__test_8h.html#aef044303f27d72b57e698176a390c193">SpeedSTR_update</a>.<a class="code" href="structspeed___cfg__str.html#a712a858974a53838308b6ee9202ddd4a">MOTOR_angel</a> =  Angle;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">/* Arrange */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="_speed___control_8c.html#a878bc5fb098f7f39c55aa035b2e66a55">   73</a></span>&#160;      <span class="keywordtype">void</span> <a class="code" href="_speed___control_8c.html#a878bc5fb098f7f39c55aa035b2e66a55">speed_st_Testing_Fail</a>(<a class="code" href="_speed___control___config_8h.html#a5b35294337f49da506342b7a70031815">MOTOR_ANGEL_t</a> Angle)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <a class="code" href="_motor__test_8h.html#aef044303f27d72b57e698176a390c193">SpeedSTR_update</a>.<a class="code" href="structspeed___cfg__str.html#a712a858974a53838308b6ee9202ddd4a">MOTOR_angel</a> =  Angle;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
 <div class="ttc" id="a_error_8h_html_a1e7cc741c56207a8872ea58373276925"><div class="ttname"><a href="_error_8h.html#a1e7cc741c56207a8872ea58373276925">E_OK</a></div><div class="ttdeci">#define E_OK</div><div class="ttdef"><b>Definition:</b> <a href="_error_8h_source.html#l00013">Error.h:13</a></div></div>
 <div class="ttc" id="a_error_8h_html_aee03127e28c2fce8a862b1154bc09028"><div class="ttname"><a href="_error_8h.html#aee03127e28c2fce8a862b1154bc09028">ERROR_STATUS</a></div><div class="ttdeci">uint8_t ERROR_STATUS</div><div class="ttdef"><b>Definition:</b> <a href="_error_8h_source.html#l00020">Error.h:20</a></div></div>
 <div class="ttc" id="a_motor__test_8h_html_aef044303f27d72b57e698176a390c193"><div class="ttname"><a href="_motor__test_8h.html#aef044303f27d72b57e698176a390c193">SpeedSTR_update</a></div><div class="ttdeci">speed_Cfg_str SpeedSTR_update</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control___config_8c_source.html#l00003">Speed_Control_Config.c:3</a></div></div>
 <div class="ttc" id="a_speed___control_8c_html_a12fe3e75e646ad863b4fa9e31ce20e9e"><div class="ttname"><a href="_speed___control_8c.html#a12fe3e75e646ad863b4fa9e31ce20e9e">Speed_Control_get</a></div><div class="ttdeci">switch_state_Ptr_to_fun Speed_Control_get</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00004">Speed_Control.c:4</a></div></div>
 <div class="ttc" id="a_speed___control_8c_html_a5f22f6d8cae7b0f7d5d8ac179150c4a6"><div class="ttname"><a href="_speed___control_8c.html#a5f22f6d8cae7b0f7d5d8ac179150c4a6">Speed_Control_get_Switch_state</a></div><div class="ttdeci">ERROR_STATUS Speed_Control_get_Switch_state(speed_Cfg_str *SpeedSTR_used)</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00022">Speed_Control.c:22</a></div></div>
-<div class="ttc" id="a_speed___control_8c_html_a878bc5fb098f7f39c55aa035b2e66a55"><div class="ttname"><a href="_speed___control_8c.html#a878bc5fb098f7f39c55aa035b2e66a55">speed_st_Testing_Fail</a></div><div class="ttdeci">void speed_st_Testing_Fail(MOTOR_ANGEL_t Angle)</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00070">Speed_Control.c:70</a></div></div>
+<div class="ttc" id="a_speed___control_8c_html_a878bc5fb098f7f39c55aa035b2e66a55"><div class="ttname"><a href="_speed___control_8c.html#a878bc5fb098f7f39c55aa035b2e66a55">speed_st_Testing_Fail</a></div><div class="ttdeci">void speed_st_Testing_Fail(MOTOR_ANGEL_t Angle)</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00073">Speed_Control.c:73</a></div></div>
 <div class="ttc" id="a_speed___control_8c_html_ab1c8f180ee4dc80d5f09cea8264e118f"><div class="ttname"><a href="_speed___control_8c.html#ab1c8f180ee4dc80d5f09cea8264e118f">Angel_update</a></div><div class="ttdeci">MOTOR_ANGEL_t Angel_update(speed_Cfg_str *SpeedSTR_used)</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00040">Speed_Control.c:40</a></div></div>
 <div class="ttc" id="a_speed___control_8c_html_ab62e7aceadb62942e7394db5edfbebac"><div class="ttname"><a href="_speed___control_8c.html#ab62e7aceadb62942e7394db5edfbebac">Speed_Control_init</a></div><div class="ttdeci">ERROR_STATUS Speed_Control_init(void)</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00006">Speed_Control.c:6</a></div></div>
 <div class="ttc" id="a_speed___control_8c_html_afe081dbac97f0fe340bba570f304b914"><div class="ttname"><a href="_speed___control_8c.html#afe081dbac97f0fe340bba570f304b914">speed_Con_Testing_setter</a></div><div class="ttdeci">void speed_Con_Testing_setter(speed_Cfg_str *SpeedSTR_used, uint8_t Program_Mode)</div><div class="ttdef"><b>Definition:</b> <a href="_speed___control_8c_source.html#l00018">Speed_Control.c:18</a></div></div>

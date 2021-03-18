@@ -99,9 +99,9 @@ $(document).ready(function(){initNavTree('_motor__test_8c_source.html',''); init
 <div class="contents">
 <a href="_motor__test_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_motor__test_8h.html">Motor_test.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="_motor__test_8c.html#a93944240a2e5a18620e233144df8ed44">    2</a></span>&#160;<a class="code" href="_motor__test_8c.html#a93944240a2e5a18620e233144df8ed44">TEST_GROUP</a>(Motor_Angle);</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef MAX_TESTS</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define MAX_TESTS 5</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="_motor__test_8c.html#a3da69061596ed53b0e7d5fca787e80dd">    6</a></span>&#160;<a class="code" href="_motor__test_8c.html#a3da69061596ed53b0e7d5fca787e80dd">TEST_SETUP</a>(Motor_Angle)</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
@@ -126,7 +126,7 @@ $(document).ready(function(){initNavTree('_motor__test_8c_source.html',''); init
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="_motor_8c.html#ad5c7e9daebc3bc14df1dc485b2d58623">MOTOR_init</a>();</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">/* Arrange */</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordflow">for</span>(uint8_t test_num=2;test_num &lt; MAX_TESTS;test_num++){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordflow">for</span>(uint8_t test_num=0;test_num &lt; MAX_TESTS;test_num++){</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="_switch_8c.html#a959f4dc1b973f95097ab5179fe7ce8aa">SWITCH_init</a>(&amp;<a class="code" href="_switch___config_8c.html#a7c899992a7480abecf7e31bb3d73806f">P_Switch</a>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="_switch_8c.html#a959f4dc1b973f95097ab5179fe7ce8aa">SWITCH_init</a>(&amp;<a class="code" href="_switch___config_8c.html#a15eb8c210d77b4fe66d8ccbab3419468">UpSwitch</a>);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="_switch_8c.html#a959f4dc1b973f95097ab5179fe7ce8aa">SWITCH_init</a>(&amp;<a class="code" href="_switch___config_8c.html#a90c70482c27a1825df92bbf520155161">DownSwitch</a>);</div>

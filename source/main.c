@@ -36,12 +36,11 @@ ret=SWITCH_init(&P_Switch);
 ret=Speed_Control_init();
 ret=MOTOR_init();
 
-/*
 while(1)
 {
 
 
-}*/
-  return 0;
+}
+return 0;
 
 }

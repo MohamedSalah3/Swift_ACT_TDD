@@ -120,12 +120,22 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <h3>Switch Module </h3>
 <p>The Method Used here For Function Prototyping Was To Return Error Status Which is basically </p>
 <blockquote class="doxtable">
-<p>typedef uint8_t ERROR_STATUS; #define E_NOK 1 &gt;#define E_OK 0 &gt;#define NULL_PTR 2 &gt;#define NOT_INIT 4 &gt;#define MULTIPLE_INIT 6 &gt;#define INVALID_PARM 8 </p>
+<p>typedef uint8_t ERROR_STATUS;</p>
+<p>#define E_NOK 1</p>
+<p>#define E_OK 0</p>
+<p>#define NULL_PTR 2</p>
+<p>#define NOT_INIT 4</p>
+<p>#define MULTIPLE_INIT 6</p>
+<p>#define INVALID_PARM 8 </p>
 </blockquote>
 <p>And with it i defied Multiple Macros to make it readable , By using this method i will be sure that there is a feedback from the function of what really happened .</p>
 <p>So these are The functions used in this module </p>
-<p>&gt;ERROR_STATUS <a class="el" href="_switch_8h.html#a959f4dc1b973f95097ab5179fe7ce8aa">SWITCH_init(Switch_Cfg_str* Switch_used)</a>;</p>
-<p>&gt;ERROR_STATUS <a class="el" href="_switch_8h.html#a4992551af623108b87b80308f8ba0e4d">SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str*Test_data)</a>; </p>
+<blockquote class="doxtable">
+<p>ERROR_STATUS <a class="el" href="_switch_8h.html#a959f4dc1b973f95097ab5179fe7ce8aa">SWITCH_init(Switch_Cfg_str* Switch_used)</a>; </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>ERROR_STATUS <a class="el" href="_switch_8h.html#a4992551af623108b87b80308f8ba0e4d">SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str*Test_data)</a>; </p>
+</blockquote>
 <p>The most important Parts of this Module Are lies here When we make a structure to represent every button we have to make usable for both testing and production and actuallyit was so useful Members that was so useful while coding are Switch id , Switch status , push time and lastly Programming mode. Switch id was used to make every button different from the others switch status used to know the status of buttons push time was exclusive for p switch and lastly programming mode used in init function to swap the used functions when production and when testing as we have used a pointer to function to do this trick . </p>
 <blockquote class="doxtable">
 <p>typedef struct <a class="el" href="struct_switch___cfg__str.html">Switch_Cfg_str</a>{ </p>
@@ -155,10 +165,18 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>}<a class="el" href="struct_switch___cfg__str.html">Switch_Cfg_str</a>; </p>
 </blockquote>
 <p>As You can see we swapped this functions in the init function using pointer to function </p>
-<p>&gt;SWITCH_STATE_t <a class="el" href="_switch_8h.html#ab5f4ac125bdcb2647817fab9660a66aa">SWITCH_getSwState_real(Switch_Cfg_str* Switch_used)</a>;</p>
-<p>&gt;SWITCH_STATE_t <a class="el" href="_switch_8h.html#ac95d8d92d1ec267b933fdb1cee567d9f">SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used)</a>;</p>
-<p>&gt;uint32_t <a class="el" href="_switch_8h.html#ae7234af716851c9b6e668435b0ae3578">SWITCH_getP_time_real(Switch_Cfg_str* Switch_used)</a>;</p>
-<p>&gt;uint32_t <a class="el" href="_switch_8h.html#a6a5be207d19976be9000374e3accee37">SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used)</a>; </p>
+<blockquote class="doxtable">
+<p>SWITCH_STATE_t <a class="el" href="_switch_8h.html#ab5f4ac125bdcb2647817fab9660a66aa">SWITCH_getSwState_real(Switch_Cfg_str* Switch_used)</a>; </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>SWITCH_STATE_t <a class="el" href="_switch_8h.html#ac95d8d92d1ec267b933fdb1cee567d9f">SWITCH_getSwState_Fake(Switch_Cfg_str* Switch_used)</a>; </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>uint32_t <a class="el" href="_switch_8h.html#ae7234af716851c9b6e668435b0ae3578">SWITCH_getP_time_real(Switch_Cfg_str* Switch_used)</a>; </p>
+</blockquote>
+<blockquote class="doxtable">
+<p>uint32_t <a class="el" href="_switch_8h.html#a6a5be207d19976be9000374e3accee37">SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used)</a>; </p>
+</blockquote>
 <p>These are the objects which was created </p>
 <blockquote class="doxtable">
 <p>extern <a class="el" href="struct_switch___cfg__str.html">Switch_Cfg_str</a> UpSwitch; </p>
@@ -208,6 +226,10 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p></p>
 </blockquote>
 <h1>How To Run This Project </h1>
+<p>Go To Project Folder -&gt; Source -&gt; you will find a file called (Click Me Twice ) thats a batch file i used instead of writing a Make file This file contains</p>
+<p>gcc -D MAX_TESTS=10 <a class="el" href="main_8c.html">main.c</a> <a class="el" href="_motor_8c.html">Motor/Motor.c</a> <a class="el" href="_switch___config_8c.html">Switch/Switch_Config.c</a> <a class="el" href="_switch_8c.html">Switch/Switch.c</a> <a class="el" href="_speed___control_8c.html">Speed_Control/Speed_Control.c</a> <a class="el" href="_speed___control___config_8c.html">Speed_Control/Speed_Control_Config.c</a> ../test/unity/unity.c ../test/unity/unity_fixture.c ../test/unity/unity_memory.c ../test/Fake_Switch/Fake_Switch.c ../test/Speed_Control_test/Speed_Control_test.c ../test/Motor_test/Motor_test.c</p>
+<p>a</p>
+<p>And Thats How You will run the project .... Please note if you wanna Change the number of test edit this batchfile with the number of tests Required </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

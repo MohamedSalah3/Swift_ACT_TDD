@@ -143,12 +143,12 @@ These are the objects which was created
 >	extern Switch_Cfg_str P_Switch;
 >```
 
-
 <h3>  Speed Control Module</h3>
 <p>
 In This Module Basically What We are doing is to take Data out of object to inject it in another Object . 
 so in this module we constructed a structure which will take the data from all push button structure and put it in a new structure 
-the data we were most intrested in are Switches status and push time so we created this structure to handle this task .
+    the data we were most intrested in are Switches status and push time so we created this structure to handle this task .</p>
+
 
 > ```c
 >    typedef struct speed_Cfg_str  {  
@@ -219,3 +219,10 @@ In This Module Basically What We are doing is to take Data out of object to Prin
 
 <h1> How To Run This Project  </h1>
 
+Go To  Project Folder -> Source -> you will find a file called (Click Me Twice ) thats a batch file i used instead of writing a Make file This file contains 
+
+gcc -D MAX_TESTS=10 main.c Motor/Motor.c  Switch/Switch_Config.c Switch/Switch.c  Speed_Control/Speed_Control.c  Speed_Control/Speed_Control_Config.c ../test/unity/unity.c ../test/unity/unity_fixture.c ../test/unity/unity_memory.c ../test/Fake_Switch/Fake_Switch.c  ../test/Speed_Control_test/Speed_Control_test.c ../test/Motor_test/Motor_test.c
+
+a
+
+And Thats How You will run the project .... Please note if you wanna Change the number of test edit this batchfile with the number of tests Required 

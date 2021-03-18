@@ -1,8 +1,8 @@
 #include "Motor_test.h"
 TEST_GROUP(Motor_Angle);
-
+#ifndef MAX_TESTS
 #define MAX_TESTS 5
-
+#endif
 TEST_SETUP(Motor_Angle)
 {
 
