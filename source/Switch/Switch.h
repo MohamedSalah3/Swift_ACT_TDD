@@ -5,6 +5,8 @@
 /*************************************************************/
 /*This Function is used with Both Testing and Production Code */
 /*************************************************************/
+extern SWITCH_STATE_t State_Machine[5][3];
+extern uint8_t index_SM[3];
 
 
 /**********************************************************************************/
@@ -25,7 +27,7 @@ extern ptr_to_Fun_Ret_uint32t Switch_get_time;
 		  * @par Input : Switch_Cfg_str* Switch_used Which is a pointer to struct holds Info needed
 		  * @par Input 2: u8Switch_status this is used to mock up all the text reading
 		  * @par Output  : void
-		  
+
 	*/
 void switch_st_Testing_Fail(Switch_Cfg_str* Switch_used,uint8_t u8Switch_status,uint8_t u8Timing,uint8_t u8Program_mode );
 
@@ -34,8 +36,8 @@ void switch_st_Testing_Fail(Switch_Cfg_str* Switch_used,uint8_t u8Switch_status,
 		  * @par Input : Program_Mode Make the init fun change pointer to testing funs
 		  * @par Input 2: Switch_Cfg_str* Switch_used a pointer to struct to holdsevery button info
 		  * @par Output  : ERROR_STATUS
-		  
-		  
+
+
 	*/
 void switch_st_Testing_setter(Switch_Cfg_str* Switch_used,uint8_t u8_Programming_Mode );
 

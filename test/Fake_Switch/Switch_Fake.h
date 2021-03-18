@@ -8,6 +8,7 @@
 /*#include "../../source/led/led.h"
 */
 #include "../../source/Motor/Motor.h"
+#include "../../source/Switch/Switch.h"
 /***********************************************************
 test_Cfg_str* Switch_getTestData(test_Cfg_str* Data_Return,uint8_t test_num);
 Param [in] : uint8_t test_num

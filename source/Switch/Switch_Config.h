@@ -36,6 +36,7 @@ typedef uint8_t SWITCH_STATE_t ;
 
 #define PRODUCTION 0
 #define TESTING    1
+
 #define UPSWITCH   0
 #define DOWNSWITCH 1
 #define P_SWITCH   2

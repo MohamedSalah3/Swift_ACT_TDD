@@ -167,6 +167,445 @@ DownSwitch.Switch_status = 30;
     LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_init(&DownSwitch));
 SWITCH_init(&DownSwitch);
 }
+TEST(Switch_Status,NULL_PTR_update_detection1)
+{
+
+    /*!
+		  * @par Given : switch update shouldnot take a null ptr
+		  * @par When  : SWITCH_update() is called with null ptr for Switch_used and
+      real ptr for Test_data then reverse it
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = NULL_PTR;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  DOWNSWITCH,
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(0,&test_valid));
+
+}
+
+TEST(Switch_Status,NULL_PTR_update_detection2)
+{
+
+    /*!
+		  * @par Given : switch update shouldnot take a null ptr
+		  * @par When  : SWITCH_update() is called with null ptr for Switch_used and
+      real ptr for Test_data then reverse it
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = NULL_PTR;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  DOWNSWITCH,
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,0));
+
+}
+/*Perform EP and BVA testing Techniques*/
+TEST(Switch_Status,EquivelP_and_BVA_testing0)
+{
+
+    /*!
+		  * @par Given : switch update should not take a invalid switch id
+		  * @par When  : SWITCH_update() is called with invalid switch id
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = INVALID_PARM;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  -1,     /**Invalid Switch id */
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+/*Perform EP and BVA testing Techniques*/
+TEST(Switch_Status,EquivelP_and_BVA_testing1)
+{
+
+    /*!
+		  * @par Given : switch update should not take a invalid switch id
+		  * @par When  : SWITCH_update() is called with invalid switch id
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = INVALID_PARM;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  P_SWITCH+1,     /**Invalid Switch id */
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+
+/*Perform EP and BVA testing Techniques*/
+TEST(Switch_Status,EquivelP_and_BVA_testing2)
+{
+
+    /*!
+		  * @par Given : switch update should not take a invalid switch id
+		  * @par When  : SWITCH_update() is called with invalid switch id
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = INVALID_PARM;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  UPSWITCH-1,     /**Invalid Switch id */
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+/*Perform EP and BVA testing Techniques*/
+TEST(Switch_Status,EquivelP_and_BVA_testing3)
+{
+
+    /*!
+		  * @par Given : switch update should not take a invalid switch id
+		  * @par When  : SWITCH_update() is called with invalid switch id
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = E_OK;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  DOWNSWITCH,     /**Invalid Switch id */
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+TEST(Switch_Status,EquivelP_and_BVA_testing4)
+{
+
+    /*!
+		  * @par Given : switch update should not take a invalid switch Status
+		  * @par When  : SWITCH_update() is called with invalid switch status
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = INVALID_PARM;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,-1,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  DOWNSWITCH,     /**Invalid Switch id */
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+TEST(Switch_Status,EquivelP_and_BVA_testing5)
+{
+
+    /*!
+		  * @par Given : switch update should not take a invalid switch Status
+		  * @par When  : SWITCH_update() is called with invalid switch status
+		  * @par Then  : Switch Module should be able to Report and Prevent it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = INVALID_PARM;
+
+	/* Arrange */
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_RELEASED+1,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  DOWNSWITCH,     /**Invalid Switch id */
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+TEST(Switch_Status,EquivelP_and_BVA_testing6)
+{
+
+    /*!
+		  * @par Given : switch update should not take a valid switch Status
+		  * @par When  : SWITCH_update() is called with valid switch status
+		  * @par Then  : Switch Module should be able to Process it
+	*/
+
+
+    /* Expected  state */
+	ERROR_STATUS expected_ERROR_STATUS = E_OK;
+
+	/* Arrange */
+
+test_Cfg_str test_valid={
+{SW_PRESSED,SW_PREPRESSED,SW_PREPRESSED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  DOWNSWITCH,
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+SWITCH_init(&switch_used_test);
+
+  /* Assert */
+    LONGS_EQUAL(expected_ERROR_STATUS, SWITCH_update(&switch_used_test,&test_valid));
+
+}
+TEST(Switch_Status,stateMachine_Mechanism)
+{
+
+    /*!
+		  * @par Given : switch update is used to update objects
+		  * @par When  : SWITCH_update() is called
+		  * @par Then  : Switch objects should change
+	*/
+
+
+
+	/* Arrange */
+  SWITCH_init(&P_Switch);
+
+
+
+test_Cfg_str test_valid={
+{SW_RELEASED,SW_RELEASED,SW_RELEASED},
+10
+};
+
+test_Cfg_str test_valid2={
+{SW_PREPRESSED,SW_PREPRESSED,SW_PREPRESSED},
+10
+};
+
+test_Cfg_str test_valid3={
+{SW_PRESSED,SW_PRESSED,SW_PRESSED},
+10
+};
+
+test_Cfg_str test_valid4={
+{SW_PRERELEASED,SW_PRERELEASED,SW_PRERELEASED},
+10
+};
+
+test_Cfg_str test_valid5={
+{SW_RELEASED,SW_RELEASED,SW_RELEASED},
+10
+};
+Switch_Cfg_str switch_used_test={
+
+  GPIOD ,
+  PIN1,
+  P_SWITCH,
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+
+
+
+SWITCH_update(&switch_used_test,&test_valid);
+SWITCH_update(&switch_used_test,&test_valid2);
+SWITCH_update(&switch_used_test,&test_valid3);
+SWITCH_update(&switch_used_test,&test_valid4);
+SWITCH_update(&switch_used_test,&test_valid5);
+
+
+  /* Assert */
+    LONGS_EQUAL(E_OK,SWITCH_update(&switch_used_test,&test_valid5));
+}
+
+
+
+TEST(Switch_Status,stateMachine_Mechanism1)
+{
+
+    /*!
+		  * @par Given : switch update is used to update objects
+		  * @par When  : SWITCH_update() is called
+		  * @par Then  : Switch objects should change
+	*/
+
+
+
+	/* Arrange */
+
+    SWITCH_init(&UpSwitch);
+  /* Arrange */
+test_Cfg_str test_valid={
+{SW_RELEASED,SW_RELEASED,SW_RELEASED},
+10
+};
+
+test_Cfg_str test_valid2={
+{SW_PREPRESSED,SW_PREPRESSED,SW_PREPRESSED},
+10
+};
+
+test_Cfg_str test_valid3={
+{SW_PRESSED,SW_PRESSED,SW_PREPRESSED},
+10
+};
+
+test_Cfg_str test_valid4={
+{SW_PRERELEASED,SW_PRERELEASED,SW_PRERELEASED},
+10
+};
+
+test_Cfg_str test_valid5={
+{SW_RELEASED,SW_RELEASED,SW_RELEASED},
+10
+};
+
+
+Switch_Cfg_str switch_used_test2={
+
+  GPIOD ,
+  PIN1,
+  UPSWITCH,
+  SW_RELEASED,
+  TESTING,
+  0,
+  0
+};
+
+
+SWITCH_update(&switch_used_test2,&test_valid);
+SWITCH_update(&switch_used_test2,&test_valid2);
+SWITCH_update(&switch_used_test2,&test_valid3);
+SWITCH_update(&switch_used_test2,&test_valid4);
+SWITCH_update(&switch_used_test2,&test_valid5);
+
+
+
+  /* Assert */
+    LONGS_EQUAL(STATE_MACHINE_ERROR,SWITCH_update(&switch_used_test2,&test_valid5));
+}
+
 
 TEST(Switch_Status,Update_fun_is_updating)
 {
@@ -207,7 +646,17 @@ TEST_GROUP_RUNNER(Switch_Status)
     /* And so on..*/
     /* False transitions & 1-Switch coverage tests should be added */
     RUN_TEST_CASE(Switch_Status, Update_fun_is_updating);
-
+    RUN_TEST_CASE(Switch_Status,NULL_PTR_update_detection1);
+  RUN_TEST_CASE(Switch_Status,NULL_PTR_update_detection2);
+  RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing0);
+  RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing1);
+  RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing2);
+RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing3);
+RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing4);
+RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing5);
+RUN_TEST_CASE(Switch_Status,EquivelP_and_BVA_testing6);
+RUN_TEST_CASE(Switch_Status,stateMachine_Mechanism);
+RUN_TEST_CASE(Switch_Status,stateMachine_Mechanism1);
 }
 
 

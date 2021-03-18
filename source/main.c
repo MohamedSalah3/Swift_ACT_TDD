@@ -14,7 +14,7 @@ void RunAllTests(void)
 {
 RUN_TEST_GROUP(Switch_Status);
  RUN_TEST_GROUP(Speed_Control);
-/*RUN_TEST_GROUP(Motor_Angle);*/
+RUN_TEST_GROUP(Motor_Angle);
 }
 
 
@@ -39,14 +39,9 @@ ret=MOTOR_init();
 /*
 while(1)
 {
-  ret=SWITCH_update(&UpSwitch);
-  ret=SWITCH_update(&DownSwitch);
-  ret=SWITCH_update(&P_Switch);
 
 
-
-}
-*/
+}*/
   return 0;
 
 }

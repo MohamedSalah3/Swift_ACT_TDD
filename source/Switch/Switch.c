@@ -5,6 +5,8 @@
 /* Globals */
 
 /* Switch State */
+SWITCH_STATE_t State_Machine[5][3];
+uint8_t index_SM[3]={0,0,0};
 static SWITCH_STATE_t Switch_State;
 ptr_to_Fun_Ret_uint32t Switch_get_time;
 switch_state_Ptr_to_fun SWITCH_getSwState ;
@@ -13,6 +15,10 @@ switch_state_Ptr_to_fun SWITCH_getSwState ;
 ERROR_STATUS SWITCH_init(Switch_Cfg_str* Switch_used)
 {
   uint8_t Ret = E_OK;
+
+  for(uint8_t i=0; i<3; i++)
+  {index_SM[i] = 0;}
+
 if(Switch_used){
   if(((Switch_used -> GPIO) > GPIOD || (Switch_used -> GPIO) < GPIOA )
   ||((Switch_used -> pins) > PIN7 || (Switch_used -> pins) < PIN0 )
@@ -92,19 +98,84 @@ uint32_t  SWITCH_getP_time_Fake(Switch_Cfg_str* Switch_used)
 }
 
 
+/******************************************************************************************
+First Lets Check Invalid Inputs , first lets check null ptr detection
+Using Testing Technique EP and BVA
+*****************************************************************************************/
 
 ERROR_STATUS SWITCH_update(Switch_Cfg_str* Switch_used,test_Cfg_str *Test_data)
 {
   ERROR_STATUS ret=E_OK;
+uint8_t arr_check_SM [5]={SW_RELEASED,SW_PREPRESSED,SW_PRESSED,SW_PRERELEASED,SW_RELEASED};
+
+if((Switch_used == NULL) || (Test_data == NULL)){
+ret = NULL_PTR;}else{
+  if(Switch_used -> Switch_ID > P_SWITCH ||Switch_used -> Switch_ID < UPSWITCH )
+{
+  ret = INVALID_PARM;
+}else{
 
 if((Switch_used -> Switch_ID) == P_SWITCH){
- (Switch_used -> Switch_status)=(Test_data -> Switch_status[P_SWITCH]);
-  (Switch_used -> Push_Time)=(Test_data -> Push_Time);
+  if((Test_data -> Switch_status[P_SWITCH]>SW_RELEASED) || (Test_data -> Switch_status[P_SWITCH]<SW_PREPRESSED))
+  {
+    ret = INVALID_PARM;
+  }else{
+       (Switch_used -> Switch_status)=(Test_data -> Switch_status[P_SWITCH]);
+
+       State_Machine[index_SM[P_SWITCH]][P_SWITCH]= (Switch_used -> Switch_status);
+       if(State_Machine[index_SM[P_SWITCH]][P_SWITCH] == arr_check_SM [index_SM[P_SWITCH] ]){
+       if(index_SM[P_SWITCH] < 5)
+       { index_SM[P_SWITCH]+=1;}else{index_SM[P_SWITCH]=0;}
+     }else{ret = STATE_MACHINE_ERROR;}
+
+if(Test_data -> Push_Time >= 0 &&Test_data -> Push_Time <= 5070 )
+  {(Switch_used -> Push_Time)=(Test_data -> Push_Time);
+}else{  ret = INVALID_PARM;}
 }
+}
+
  if((Switch_used -> Switch_ID )== DOWNSWITCH)
-  (Switch_used -> Switch_status)=(Test_data -> Switch_status[DOWNSWITCH]);
-  if(Switch_used -> Switch_ID == UPSWITCH)
-   (Switch_used -> Switch_status)=(Test_data -> Switch_status[UPSWITCH]);
+ {
+   if((Test_data -> Switch_status[DOWNSWITCH]>SW_RELEASED) || (Test_data -> Switch_status[DOWNSWITCH]<SW_PREPRESSED))
+   {
+     ret = INVALID_PARM;
+   }else{
+
+     (Switch_used -> Switch_status)=(Test_data -> Switch_status[DOWNSWITCH]);
+
+     State_Machine[index_SM[DOWNSWITCH]][DOWNSWITCH]= (Switch_used -> Switch_status);
+     if(State_Machine[index_SM[DOWNSWITCH]][DOWNSWITCH] == arr_check_SM [index_SM[DOWNSWITCH] ]){
+     if(index_SM[DOWNSWITCH] < 5)
+     { index_SM[DOWNSWITCH]+=1;}else{index_SM[DOWNSWITCH]=0;}
+     }else{ret = STATE_MACHINE_ERROR;}
+
+}
+}
+
+
+
+if(Switch_used -> Switch_ID == UPSWITCH){
+  if((Test_data -> Switch_status[UPSWITCH]>SW_RELEASED) || (Test_data -> Switch_status[UPSWITCH]<SW_PREPRESSED))
+  {
+    ret = INVALID_PARM;
+  }else{
+    (Switch_used -> Switch_status)=(Test_data -> Switch_status[DOWNSWITCH]);
+
+    State_Machine[index_SM[UPSWITCH]][UPSWITCH]= (Switch_used -> Switch_status);
+    if(State_Machine[index_SM[UPSWITCH]][UPSWITCH] == arr_check_SM [index_SM[UPSWITCH] ]){
+    if(index_SM[UPSWITCH] < 5)
+    { index_SM[UPSWITCH]+=1;}else{index_SM[UPSWITCH]=0;}
+    }else{ret = STATE_MACHINE_ERROR;}
+}
+}
+
+
+
+
+}
+
+}
+
 
   return ret;
 }

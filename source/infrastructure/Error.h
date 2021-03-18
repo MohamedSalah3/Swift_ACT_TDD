@@ -15,6 +15,7 @@
 #define NOT_INIT    4
 #define MULTIPLE_INIT 6
 #define INVALID_PARM  8
+#define STATE_MACHINE_ERROR  9
 
 typedef uint8_t ERROR_STATUS;
 

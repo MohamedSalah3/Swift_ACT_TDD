@@ -1,5 +1,5 @@
 "+ve"switchstate  "-ve"switchstate 			   "p"switchstate      "p"switchpresstimeinms
-SW_RELEASED           SW_RELEASED           SW_PREPRESSED            0
+SW_RELEASED           SW_RELEASED           SW_PREPRESSED            15
 SW_RELEASED           SW_RELEASED            SW_PRESSED           60
 SW_RELEASED           SW_RELEASED          SW_PRESSED              30
 SW_RELEASED           SW_RELEASED            SW_RELEASED           0
