@@ -39,6 +39,9 @@
 
 	MOTOR_ANGEL_t Angel_update(speed_Cfg_str* SpeedSTR_used)
 	{
+
+
+		
 uint32_t time = (SpeedSTR_used -> Push_Time);
 
 if(SpeedSTR_used -> Switch_status[UPSWITCH] == SW_PREPRESSED)

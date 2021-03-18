@@ -72,7 +72,6 @@ TEST(Speed_Control,Update_Boundries)
     * @par Then  : MOTOR is in MEDIUM state
 */
 
-MOTOR_ANGEL_t expected_Angle = 93;
 
 
 //speed_st_Testing_Fail(MAXIMUM);
@@ -90,6 +89,8 @@ SWITCH_update(&DownSwitch,(Switch_getTestData(&test_data,0)));
 /* Assert */
 
 Speed_Control_get_Switch_state(&SpeedSTR_update);
+
+MOTOR_ANGEL_t expected_Angle = Angel_update(&SpeedSTR_update);
 
 
 
